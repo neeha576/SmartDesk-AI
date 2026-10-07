@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="810" viewBox="0 -40 1060 810" role="img" aria-label="SmartDesk main flow: the employee&#x27;s message reaches the router, which uses Send() to start the IT, HR, smalltalk and status agents in parallel for each part; each agent uses its tools and hands its output to the synthesizer, which returns one answer and at most one follow-up." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiYzBmZjNjZi0wNWIyLTQ4ZjQtODQwZi04NjI1NjhiODNhNDkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaN5nY5/LFG/pP1ZJXMEz+5oAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4ZjViYTkzMy02MTg2LTQyMDEtYTc0Yi04ZDFjOTk3MGFjNjBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoBJpGczv2N8hhq83a3tlo8QAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg0iz+0mgFyC7fq8ZzTJCBxiBMi7NlTiuqL6SJtFuY+GikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaB8dG9X5E2fUJiaQYzZ7LAoAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYILorA0W5ERmrVlF8ut6V3wP/MlLej/K/phgkMiqH/EM/ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQHMZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmJjMGZmM2NmLTA1YjItNDhmNC04NDBmLTg2MjU2OGI4M2E0OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjRiYjg5ZjU5LTNlNTYtNGY0OS04ZWE3LWU1M2YwYjk0MzFkOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDSLP7SaAXILt+rxnNMkIHGIEyLs2VOK6ovpIm0W5j4aKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgggBcwiQpr4dptL6x0Z+Z6jfdrJ1eYARjmL7MLHNK5Mk+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggjXS2LY/hn0Zt0TIvs5FpR20guirNAur/x7DIc7KhzqR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQHBktD99bc6MHFP6PgxEt6A3EOkS0aXw9V1CeqLe9JDbOpDH0VtWMrvL7be0xwtB96/T07uoaG829+pE9yVt9sc=</c2pa:manifest></metadata><style>svg { font-family: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif; } .c-teal { fill: #e2f3ef; stroke: #3f8a80; } .c-sand { fill: #f1ede4; stroke: #8c7d62; }
+.c-violet { fill: #ece9fb; stroke: #6f5fd0; stroke-width: 1.8; } .c-blue { fill: #e5effa; stroke: #3f7cc0; }
+.c-blue2 { fill: #ffffff; stroke: #3f7cc0; } .c-grey { fill: #eef1f3; stroke: #7d8b94; }
+.c-peach { fill: #fbebe4; stroke: #c8714f; } .c-peach2 { fill: #ffffff; stroke: #c8714f; }
+.c-green { fill: #e8f2dc; stroke: #6c9a3a; stroke-width: 1.8; }
+.side { fill: none; stroke: #8a9aa4; stroke-dasharray: 4 4; }
+.side-l { font: 600 11px 'JetBrains Mono', Consolas, monospace; fill: #5a6a74; letter-spacing: .06em; }
+/* SVG parts */
+.node { fill: #ffffff; stroke: #8a9aa4; stroke-width: 1.4; }
+.hitl { fill: #fdf3e6; stroke: #b45309; stroke-width: 1.8; }
+.store { fill: #e3f1ef; stroke: #3f8a80; stroke-width: 1.4; }
+.actor { fill: #e9eef1; stroke: #17232b; stroke-width: 1.4; }
+.c-teal { fill: #e2f3ef; stroke: #3f8a80; } .c-sand { fill: #f1ede4; stroke: #8c7d62; }
+.c-violet { fill: #ece9fb; stroke: #6f5fd0; stroke-width: 1.8; } .c-blue { fill: #e5effa; stroke: #3f7cc0; }
+.c-blue2 { fill: #ffffff; stroke: #3f7cc0; } .c-grey { fill: #eef1f3; stroke: #7d8b94; }
+.c-peach { fill: #fbebe4; stroke: #c8714f; } .c-peach2 { fill: #ffffff; stroke: #c8714f; }
+.c-green { fill: #e8f2dc; stroke: #6c9a3a; stroke-width: 1.8; }
+.side { fill: none; stroke: #8a9aa4; stroke-dasharray: 4 4; }
+.side-l { font: 600 11px 'JetBrains Mono', Consolas, monospace; fill: #5a6a74; letter-spacing: .06em; }
+.frame { fill: #e9eef1; stroke: #8a9aa4; stroke-width: 1; stroke-dasharray: 5 4; }
+.frame-l { font: 600 12px 'JetBrains Mono', Consolas, monospace; fill: #5a6a74; letter-spacing: .04em; }
+.t { font-size: 13.5px; font-weight: 600; fill: #17232b; }
+.t.mono { font-family: 'JetBrains Mono', Consolas, 'Cascadia Mono', monospace;; font-size: 13px; }
+.s { font-size: 11.5px; fill: #5a6a74; }
+.l { font-size: 11.5px; fill: #5a6a74; font-style: italic; }
+.par-l { fill: #1d6fa5; font-style: normal; font-weight: 600; font-family: 'JetBrains Mono', Consolas, 'Cascadia Mono', monospace;; }
+.edge { fill: none; stroke: #8a9aa4; stroke-width: 1.4; }
+.edge.par { stroke: #1d6fa5; stroke-width: 1.8; }
+.edge.dash { stroke-dasharray: 5 4; }
+.ah { fill: #8a9aa4; }
+.ahh { fill: #1d6fa5; }
+
+</style><rect x="0" y="-40" width="1060" height="810" fill="#ffffff"/><text x="70" y="-12" style="font-size:18px;font-weight:700;fill:#17232b">SmartDesk AI · router → parallel agents → synthesizer</text><defs><marker id="f1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="f1h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahh"/></marker></defs>
+<rect class="node c-teal" x="190" y="20" width="200" height="52" rx="6"/>
+<text class="t " x="290.0" y="42.5" text-anchor="middle">Employee message</text>
+<text class="s" x="290.0" y="57.5" text-anchor="middle">CLI main.py / Streamlit</text>
+<rect class="node c-teal" x="190" y="104" width="200" height="52" rx="6"/>
+<text class="t mono" x="290.0" y="126.5" text-anchor="middle">SmartDeskChat</text>
+<text class="s" x="290.0" y="141.5" text-anchor="middle">send() · resume()</text>
+<polyline class="edge" points="290,72 290,102" marker-end="url(#f1)"/>
+<rect class="node c-sand" x="700" y="20" width="220" height="52" rx="6"/>
+<text class="t mono" x="810.0" y="42.5" text-anchor="middle">MemorySaver</text>
+<text class="s" x="810.0" y="57.5" text-anchor="middle">session memory per thread_id</text>
+<polyline class="edge" points="290,156 290,188 500,188 500,218" marker-end="url(#f1)"/>
+<polyline class="edge" points="810,72 810,188 660,188 660,218" marker-end="url(#f1)"/>
+<rect class="node c-violet" x="420" y="220" width="320" height="70" rx="6"/>
+<text class="t mono" x="580.0" y="244.0" text-anchor="middle">router (orchestrator)</text>
+<text class="s" x="580.0" y="259.0" text-anchor="middle">orchestrator.py · Pydantic RouteDecision</text>
+<text class="s" x="580.0" y="274.0" text-anchor="middle">splits a message into parts</text>
+<polyline class="edge dash" points="580,290 580,314"/>
+<polyline class="edge dash" points="185,314 935,314"/>
+<polyline class="edge dash" points="185,314 185,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="435,314 435,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="685,314 685,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="935,314 935,348" marker-end="url(#f1)"/>
+<text class="l" x="590" y="306" text-anchor="start">Send() · one part per agent (conditional dispatch)</text>
+<rect class="node c-blue" x="85" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="185.0" y="376.5" text-anchor="middle">it_agent</text>
+<text class="s" x="185.0" y="391.5" text-anchor="middle">IT knowledge base</text>
+<rect class="node c-blue" x="335" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="435.0" y="376.5" text-anchor="middle">hr_agent</text>
+<text class="s" x="435.0" y="391.5" text-anchor="middle">HR knowledge base</text>
+<rect class="node c-grey" x="585" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="685.0" y="376.5" text-anchor="middle">smalltalk_agent</text>
+<text class="s" x="685.0" y="391.5" text-anchor="middle">greetings · out of scope</text>
+<rect class="node c-peach" x="835" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="935.0" y="376.5" text-anchor="middle">status_agent</text>
+<text class="s" x="935.0" y="391.5" text-anchor="middle">create_agent · ReAct loop</text>
+<rect class="node c-blue2" x="105" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="180.0" y="482.5" text-anchor="middle">retriever</text>
+<text class="s" x="180.0" y="497.5" text-anchor="middle">Qdrant hybrid · LCEL RAG</text>
+<polyline class="edge dash" points="180,410 180,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="105,486 73,486 73,380 83,380" marker-end="url(#f1)"/>
+<rect class="node c-blue2" x="355" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="430.0" y="482.5" text-anchor="middle">retriever</text>
+<text class="s" x="430.0" y="497.5" text-anchor="middle">Qdrant hybrid · LCEL RAG</text>
+<polyline class="edge dash" points="430,410 430,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="355,486 323,486 323,380 333,380" marker-end="url(#f1)"/>
+<rect class="node c-peach2" x="855" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="930.0" y="482.5" text-anchor="middle">status tools</text>
+<text class="s" x="930.0" y="497.5" text-anchor="middle">get_my_tickets · Jira</text>
+<polyline class="edge dash" points="930,410 930,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="855,486 823,486 823,380 833,380" marker-end="url(#f1)"/>
+<polyline class="edge" points="270,410 270,550 450,550 450,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="520,410 520,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="685,410 685,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="1020,410 1020,550 720,550 720,578" marker-end="url(#f1)"/>
+<text class="l" x="603" y="540" text-anchor="middle">partial_results</text>
+<rect class="node c-green" x="380" y="580" width="400" height="64" rx="6"/>
+<text class="t mono" x="580.0" y="608.5" text-anchor="middle">synthesizer</text>
+<text class="s" x="580.0" y="623.5" text-anchor="middle">synthesizer.py · [IT Agent] … labels → one LLM merge</text>
+<line class="edge" x1="820" y1="598" x2="860" y2="598"/><text class="s" x="868" y="602" text-anchor="start">edge</text>
+<line class="edge dash" x1="820" y1="620" x2="860" y2="620"/><text class="s" x="868" y="624" text-anchor="start">conditional edge</text>
+<rect class="node c-teal" x="290" y="700" width="220" height="56" rx="6"/>
+<text class="t mono" x="400.0" y="724.5" text-anchor="middle">final_answer</text>
+<text class="s" x="400.0" y="739.5" text-anchor="middle">one reply → employee (END)</text>
+<rect class="node c-sand" x="650" y="700" width="260" height="56" rx="6"/>
+<text class="t mono" x="780.0" y="717.0" text-anchor="middle">one follow-up (if needed)</text>
+<text class="s" x="780.0" y="732.0" text-anchor="middle">ticket_agent subgraph · offer_ticket ·</text>
+<text class="s" x="780.0" y="747.0" text-anchor="middle">status email</text>
+<polyline class="edge" points="500,644 500,672 400,672 400,698" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="660,644 660,672 780,672 780,698" marker-end="url(#f1)"/>
+<rect class="side" x="12" y="330" width="34" height="200" rx="8"/>
+<text class="side-l" transform="translate(34,430) rotate(-90)" text-anchor="middle">agents run in parallel</text>
+</svg>

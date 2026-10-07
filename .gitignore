@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+data/vector_store/*
+data/tickets/*.db
+!data/**/.gitkeep
+
+# secrets and local settings
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# test / tool caches
+.pytest_cache/
+*.log
+.DS_Store

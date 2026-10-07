@@ -1,0 +1,7 @@
+# SmartDesk UI theme (read by `streamlit run` from the project root)
+[theme]
+base = "light"
+primaryColor = "#5fb784"              # pastel-green accent: tabs, radio, toggle, focus
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f1f8f4"  # sidebar and inputs
+textColor = "#1f2d27"

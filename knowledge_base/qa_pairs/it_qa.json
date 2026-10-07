@@ -1,0 +1,254 @@
+[
+  {
+    "id": "IT-QA-001",
+    "question": "How do I reset my password?",
+    "answer": "Go to the Self-Service Password Portal at https://passwords.nmtech.com, click Forgot Password, enter your employee ID, approve the MFA prompt (or enter the SMS code), and set a new password. If you're on a company laptop away from the office, connect to the VPN once afterwards so the laptop picks up the new password.",
+    "domain": "IT",
+    "topic": "Password Reset",
+    "question_type": "procedural",
+    "source_doc": "IT-001"
+  },
+  {
+    "id": "IT-QA-002",
+    "question": "What are the password requirements?",
+    "answer": "At least 12 characters with an uppercase letter, a lowercase letter, a number and a symbol. Passwords expire every 90 days, and you can't reuse any of your last 5 passwords or include your name, employee ID or 'NMTech'.",
+    "domain": "IT",
+    "topic": "Password Reset",
+    "question_type": "factual",
+    "source_doc": "IT-001"
+  },
+  {
+    "id": "IT-QA-003",
+    "question": "My account is locked. What should I do?",
+    "answer": "Accounts lock after 5 failed sign-in attempts and unlock automatically after 30 minutes. If you can't wait, call the IT Service Desk on ext. 2020 with your employee ID; they'll verify you with a code sent to your registered mobile and unlock it.",
+    "domain": "IT",
+    "topic": "Password Reset",
+    "question_type": "procedural",
+    "source_doc": "IT-001"
+  },
+  {
+    "id": "IT-QA-004",
+    "question": "Can I reset my password if I haven't set up MFA?",
+    "answer": "No. Self-service password reset only works once MFA is set up. Without MFA, call the IT Service Desk on ext. 2020.",
+    "domain": "IT",
+    "topic": "Password Reset",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-001"
+  },
+  {
+    "id": "IT-QA-005",
+    "question": "How do I connect to the VPN?",
+    "answer": "Open GlobalProtect, enter the portal vpn.nmtech.com the first time, sign in with your NMTech email and password, and approve the MFA prompt in Microsoft Authenticator. Sessions last up to 12 hours.",
+    "domain": "IT",
+    "topic": "VPN",
+    "question_type": "procedural",
+    "source_doc": "IT-002"
+  },
+  {
+    "id": "IT-QA-006",
+    "question": "Which VPN client does NMTech use?",
+    "answer": "GlobalProtect 6.x. It's pre-installed via Software Center on Windows, available in Self Service on Mac, and requestable through the IT Service Portal for Ubuntu 22.04/24.04.",
+    "domain": "IT",
+    "topic": "VPN",
+    "question_type": "factual",
+    "source_doc": "IT-002"
+  },
+  {
+    "id": "IT-QA-007",
+    "question": "Can I connect to the VPN from my personal laptop?",
+    "answer": "No. Personal devices cannot connect to the VPN; only company laptops are allowed.",
+    "domain": "IT",
+    "topic": "VPN",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-002"
+  },
+  {
+    "id": "IT-QA-008",
+    "question": "The VPN says 'Authentication failed'. What does that mean?",
+    "answer": "Your password has probably expired. Reset it at the Self-Service Password Portal and try connecting again.",
+    "domain": "IT",
+    "topic": "VPN",
+    "question_type": "procedural",
+    "source_doc": "IT-002"
+  },
+  {
+    "id": "IT-QA-009",
+    "question": "Do I need the VPN to check email?",
+    "answer": "No. Email, NovaHR and Microsoft Teams work without the VPN. You need it for internal systems such as Jira, the code repository, and the finance and HR databases.",
+    "domain": "IT",
+    "topic": "VPN",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-002"
+  },
+  {
+    "id": "IT-QA-010",
+    "question": "How do I set up MFA?",
+    "answer": "Install Microsoft Authenticator on your phone, go to https://aka.ms/mfasetup on your laptop, sign in, choose Add sign-in method → Authenticator app, scan the QR code and approve the test notification. Then add your mobile number as a backup SMS method.",
+    "domain": "IT",
+    "topic": "MFA",
+    "question_type": "procedural",
+    "source_doc": "IT-003"
+  },
+  {
+    "id": "IT-QA-011",
+    "question": "How long do new hires have to set up MFA?",
+    "answer": "7 days from joining. After that, sign-in is blocked until IT helps you enroll.",
+    "domain": "IT",
+    "topic": "MFA",
+    "question_type": "factual",
+    "source_doc": "IT-003"
+  },
+  {
+    "id": "IT-QA-012",
+    "question": "I lost my phone with the Authenticator app. What now?",
+    "answer": "Call the IT Service Desk on ext. 2020 immediately. After verifying your identity, IT removes the old device and issues a Temporary Access Pass valid for 8 hours so you can enroll a new phone.",
+    "domain": "IT",
+    "topic": "MFA",
+    "question_type": "procedural",
+    "source_doc": "IT-003"
+  },
+  {
+    "id": "IT-QA-013",
+    "question": "I got an MFA prompt I didn't request. Should I approve it?",
+    "answer": "No. Deny it and report it to security@nmtech.com. Never approve a prompt because someone asked you to.",
+    "domain": "IT",
+    "topic": "MFA",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-003"
+  },
+  {
+    "id": "IT-QA-014",
+    "question": "How do I request a software license?",
+    "answer": "Go to the IT Service Portal → Request Software, choose the product, give a business reason and cost center, and get your manager's approval in the portal. IT assigns and installs the license within 3 business days of approval.",
+    "domain": "IT",
+    "topic": "Software Requests",
+    "question_type": "procedural",
+    "source_doc": "IT-004"
+  },
+  {
+    "id": "IT-QA-015",
+    "question": "Can I install software myself?",
+    "answer": "You don't have admin rights, but you can install anything in the pre-approved catalog yourself through Software Center (Windows) or Self Service (Mac) – for example VS Code, Python, Git, Docker Desktop, Zoom and Slack.",
+    "domain": "IT",
+    "topic": "Software Requests",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-004"
+  },
+  {
+    "id": "IT-QA-016",
+    "question": "How long does a security review for new software take?",
+    "answer": "Software or browser extensions not in the catalog need an IT Security review, which takes up to 5 business days.",
+    "domain": "IT",
+    "topic": "Software Requests",
+    "question_type": "factual",
+    "source_doc": "IT-004"
+  },
+  {
+    "id": "IT-QA-017",
+    "question": "Can I use TeamViewer or AnyDesk?",
+    "answer": "No. Remote-access tools are not allowed except those provided by IT.",
+    "domain": "IT",
+    "topic": "Software Requests",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-004"
+  },
+  {
+    "id": "IT-QA-018",
+    "question": "How do I get guest Wi-Fi for a visitor?",
+    "answer": "Ask reception on the ground floor or go to the IT Service Portal → Guest Wi-Fi Voucher, enter the visitor's name, company and visit dates. The voucher code is emailed to you to share with your guest.",
+    "domain": "IT",
+    "topic": "Wi-Fi",
+    "question_type": "procedural",
+    "source_doc": "IT-005"
+  },
+  {
+    "id": "IT-QA-019",
+    "question": "How long is a guest Wi-Fi voucher valid?",
+    "answer": "24 hours by default, extendable up to 5 days for multi-day visits. Each voucher covers up to 3 devices.",
+    "domain": "IT",
+    "topic": "Wi-Fi",
+    "question_type": "factual",
+    "source_doc": "IT-005"
+  },
+  {
+    "id": "IT-QA-020",
+    "question": "Can I connect my personal phone to NMTech-Corp Wi-Fi?",
+    "answer": "No. NMTech-Corp is for company laptops only. Use NMTech-Guest with a voucher you sponsor for yourself.",
+    "domain": "IT",
+    "topic": "Wi-Fi",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-005"
+  },
+  {
+    "id": "IT-QA-021",
+    "question": "How do I set up work email on my phone?",
+    "answer": "Install Microsoft Outlook, sign in with your NMTech email and password, approve MFA, allow NMTech to protect data in the app, and set a 6-digit app PIN. Requires iOS 16+ or Android 12+.",
+    "domain": "IT",
+    "topic": "Mobile Email",
+    "question_type": "procedural",
+    "source_doc": "IT-006"
+  },
+  {
+    "id": "IT-QA-022",
+    "question": "Can I use the iPhone Mail app for work email?",
+    "answer": "No. Only the Microsoft Outlook app is allowed; the built-in Mail and Gmail apps are blocked for company email.",
+    "domain": "IT",
+    "topic": "Mobile Email",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-006"
+  },
+  {
+    "id": "IT-QA-023",
+    "question": "Can IT see my personal photos if I add work email to my phone?",
+    "answer": "No. NMTech only manages company data inside Outlook and Teams. It cannot see your personal photos, messages, browsing or location.",
+    "domain": "IT",
+    "topic": "Mobile Email",
+    "question_type": "policy_interpretation",
+    "source_doc": "IT-006"
+  },
+  {
+    "id": "IT-QA-024",
+    "question": "What are the IT help desk hours?",
+    "answer": "Monday to Friday, 7:00 AM – 7:00 PM Mountain Time. For Critical (P1) issues outside hours, call ext. 2020 and choose option 9 for the on-call engineer.",
+    "domain": "IT",
+    "topic": "IT Service Desk",
+    "question_type": "factual",
+    "source_doc": "IT-007"
+  },
+  {
+    "id": "IT-QA-025",
+    "question": "How quickly will IT respond to a high-priority ticket?",
+    "answer": "High (P2) tickets get a first response within 1 hour, with a target resolution of 1 business day.",
+    "domain": "IT",
+    "topic": "IT Service Desk",
+    "question_type": "factual",
+    "source_doc": "IT-007"
+  },
+  {
+    "id": "IT-QA-026",
+    "question": "When do I get my laptop?",
+    "answer": "Office hires collect it from the IT desk (3rd floor) at 9:00 AM on day one. Approved remote hires get it by courier 2 business days before their start date.",
+    "domain": "IT",
+    "topic": "IT Equipment",
+    "question_type": "factual",
+    "source_doc": "ONB-002"
+  },
+  {
+    "id": "IT-QA-027",
+    "question": "How do I get an external monitor for home?",
+    "answer": "Request it through the IT Service Portal → Request Hardware. Accessory requests are fulfilled within 5 business days.",
+    "domain": "IT",
+    "topic": "IT Equipment",
+    "question_type": "procedural",
+    "source_doc": "ONB-002"
+  },
+  {
+    "id": "IT-QA-028",
+    "question": "What should I do if my laptop is stolen?",
+    "answer": "Call ext. 2020 immediately. A lost or stolen laptop is treated as a Critical (P1) security incident.",
+    "domain": "IT",
+    "topic": "IT Equipment",
+    "question_type": "procedural",
+    "source_doc": "ONB-002"
+  }
+]

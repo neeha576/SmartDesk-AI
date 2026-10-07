@@ -1,0 +1,16 @@
+langgraph
+langchain>=1.0
+langchain-core
+langchain-openai
+qdrant-client[fastembed]
+openai
+tiktoken
+langchain-text-splitters
+sentence-transformers
+requests
+pydantic[email]
+tenacity
+python-dotenv
+streamlit
+ragas
+pytest

@@ -1,0 +1,283 @@
+<title>SmartDesk AI Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column; each figure is a card that scrolls sideways on phones */
+:root {
+  --bg: #f5f7f8; --fg: #17232b; --muted: #5a6a74; --line: #8a9aa4;
+  --panel: #ffffff; --frame: #e9eef1; --store: #e3f1ef; --store-line: #3f8a80;
+  --accent: #b45309; --accent-bg: #fdf3e6; --par: #1d6fa5;
+  --teal: #e2f3ef; --teal-l: #3f8a80; --sand: #f1ede4; --sand-l: #8c7d62; --violet: #ece9fb; --violet-l: #6f5fd0;
+  --blue: #e5effa; --blue-l: #3f7cc0; --grey: #eef1f3; --grey-l: #7d8b94; --peach: #fbebe4; --peach-l: #c8714f;
+  --green: #e8f2dc; --green-l: #6c9a3a;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11181d; --fg: #e3eaee; --muted: #9aabb5; --line: #6f818c;
+  --panel: #1a242b; --frame: #151e24; --store: #15302d; --store-line: #5fb3a7;
+  --accent: #f0a04b; --accent-bg: #2e2215; --par: #6cb4e6;
+  --teal: #15302d; --teal-l: #5fb3a7; --sand: #2a261e; --sand-l: #b9a888; --violet: #24213d; --violet-l: #9d90f0;
+  --blue: #172838; --blue-l: #6ea8e3; --grey: #20282d; --grey-l: #93a3ad; --peach: #33221b; --peach-l: #e39675;
+  --green: #1f2c16; --green-l: #93c160;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11181d; --fg: #e3eaee; --muted: #9aabb5; --line: #6f818c;
+  --panel: #1a242b; --frame: #151e24; --store: #15302d; --store-line: #5fb3a7;
+  --accent: #f0a04b; --accent-bg: #2e2215; --par: #6cb4e6;
+  --teal: #15302d; --teal-l: #5fb3a7; --sand: #2a261e; --sand-l: #b9a888; --violet: #24213d; --violet-l: #9d90f0;
+  --blue: #172838; --blue-l: #6ea8e3; --grey: #20282d; --grey-l: #93a3ad; --peach: #33221b; --peach-l: #e39675;
+  --green: #1f2c16; --green-l: #93c160;
+  color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--sans); }
+main { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 64px; display: grid; gap: 36px; }
+header { display: grid; gap: 8px; }
+.eyebrow { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-size: 20px; margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 68ch; }
+.lede { color: var(--muted); font-size: 16px; }
+code { font: 13px var(--mono); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 22px; height: 14px; border-radius: 3px; border: 1.5px solid var(--line); background: var(--panel); }
+.sw.hitl { border-color: var(--accent); background: var(--accent-bg); }
+.sw.store { border-color: var(--store-line); background: var(--store); }
+.sw.par { border: 0; height: 0; border-top: 2px solid var(--par); border-radius: 0; }
+.sw.dash { border: 0; height: 0; border-top: 2px dashed var(--line); border-radius: 0; }
+
+section { display: grid; gap: 12px; }
+figure { margin: 0; background: var(--panel); border: 1px solid var(--frame); border-radius: 12px; padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.scroll { overflow-x: auto; }
+svg { display: block; width: 100%; min-width: 760px; height: auto; color: var(--fg); font-family: var(--sans); }
+figcaption { font-size: 14px; color: var(--muted); max-width: 80ch; }
+
+/* SVG parts */
+.node { fill: var(--panel); stroke: var(--line); stroke-width: 1.4; }
+.hitl { fill: var(--accent-bg); stroke: var(--accent); stroke-width: 1.8; }
+.store { fill: var(--store); stroke: var(--store-line); stroke-width: 1.4; }
+.actor { fill: var(--frame); stroke: var(--fg); stroke-width: 1.4; }
+.c-teal { fill: var(--teal); stroke: var(--teal-l); } .c-sand { fill: var(--sand); stroke: var(--sand-l); }
+.c-violet { fill: var(--violet); stroke: var(--violet-l); stroke-width: 1.8; } .c-blue { fill: var(--blue); stroke: var(--blue-l); }
+.c-blue2 { fill: var(--panel); stroke: var(--blue-l); } .c-grey { fill: var(--grey); stroke: var(--grey-l); }
+.c-peach { fill: var(--peach); stroke: var(--peach-l); } .c-peach2 { fill: var(--panel); stroke: var(--peach-l); }
+.c-green { fill: var(--green); stroke: var(--green-l); stroke-width: 1.8; }
+.side { fill: none; stroke: var(--line); stroke-dasharray: 4 4; }
+.side-l { font: 600 11px var(--mono); fill: var(--muted); letter-spacing: .06em; }
+.frame { fill: var(--frame); stroke: var(--line); stroke-width: 1; stroke-dasharray: 5 4; }
+.frame-l { font: 600 12px var(--mono); fill: var(--muted); letter-spacing: .04em; }
+.t { font-size: 13.5px; font-weight: 600; fill: var(--fg); }
+.t.mono { font-family: var(--mono); font-size: 13px; }
+.s { font-size: 11.5px; fill: var(--muted); }
+.l { font-size: 11.5px; fill: var(--muted); font-style: italic; }
+.par-l { fill: var(--par); font-style: normal; font-weight: 600; font-family: var(--mono); }
+.edge { fill: none; stroke: var(--line); stroke-width: 1.4; }
+.edge.par { stroke: var(--par); stroke-width: 1.8; }
+.edge.dash { stroke-dasharray: 5 4; }
+.ah { fill: var(--line); }
+.ahh { fill: var(--par); }
+
+.files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 28px; font-size: 14px; }
+.files div { display: grid; gap: 2px; padding-block: 8px; border-top: 1px solid var(--frame); min-width: 0; }
+.files code { color: var(--fg); overflow-wrap: anywhere; }
+.files span { color: var(--muted); }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">NMTech · IT &amp; HR help desk · capstone</div>
+    <h1>SmartDesk AI architecture</h1>
+    <p class="lede">A LangGraph multi-agent system: a router picks the agent, IT and HR questions are answered from the knowledge base in Qdrant, tickets are created and looked up in Jira, and the employee confirms before anything is created.</p>
+  </header>
+
+  <div class="legend" aria-label="Legend">
+    <span><i class="sw"></i>graph node</span>
+    <span><i class="sw hitl"></i>pauses for the employee (<code>interrupt()</code>)</span>
+    <span><i class="sw store"></i>data store or external service</span>
+        <span><i class="sw dash"></i>conditional edge, fallback or hand-back</span>
+  </div>
+
+  <section>
+    <h2>1. Main flow: router, agents, synthesizer</h2>
+    <figure>
+      <div class="scroll"><svg viewBox="0 0 1060 770" role="img" aria-label="SmartDesk main flow: the employee&#x27;s message reaches the router, which uses Send() to start the IT, HR, smalltalk and status agents in parallel for each part; each agent uses its tools and hands its output to the synthesizer, which returns one answer and at most one follow-up."><defs><marker id="f1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="f1h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahh"/></marker></defs>
+<rect class="node c-teal" x="190" y="20" width="200" height="52" rx="6"/>
+<text class="t " x="290.0" y="42.5" text-anchor="middle">Employee message</text>
+<text class="s" x="290.0" y="57.5" text-anchor="middle">CLI main.py / Streamlit</text>
+<rect class="node c-teal" x="190" y="104" width="200" height="52" rx="6"/>
+<text class="t mono" x="290.0" y="126.5" text-anchor="middle">SmartDeskChat</text>
+<text class="s" x="290.0" y="141.5" text-anchor="middle">send() · resume()</text>
+<polyline class="edge" points="290,72 290,102" marker-end="url(#f1)"/>
+<rect class="node c-sand" x="700" y="20" width="220" height="52" rx="6"/>
+<text class="t mono" x="810.0" y="42.5" text-anchor="middle">MemorySaver</text>
+<text class="s" x="810.0" y="57.5" text-anchor="middle">session memory per thread_id</text>
+<polyline class="edge" points="290,156 290,188 500,188 500,218" marker-end="url(#f1)"/>
+<polyline class="edge" points="810,72 810,188 660,188 660,218" marker-end="url(#f1)"/>
+<rect class="node c-violet" x="420" y="220" width="320" height="70" rx="6"/>
+<text class="t mono" x="580.0" y="244.0" text-anchor="middle">router (orchestrator)</text>
+<text class="s" x="580.0" y="259.0" text-anchor="middle">orchestrator.py · Pydantic RouteDecision</text>
+<text class="s" x="580.0" y="274.0" text-anchor="middle">splits a message into parts</text>
+<polyline class="edge dash" points="580,290 580,314"/>
+<polyline class="edge dash" points="185,314 935,314"/>
+<polyline class="edge dash" points="185,314 185,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="435,314 435,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="685,314 685,348" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="935,314 935,348" marker-end="url(#f1)"/>
+<text class="l" x="590" y="306" text-anchor="start">Send() · one part per agent (conditional dispatch)</text>
+<rect class="node c-blue" x="85" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="185.0" y="376.5" text-anchor="middle">it_agent</text>
+<text class="s" x="185.0" y="391.5" text-anchor="middle">IT knowledge base</text>
+<rect class="node c-blue" x="335" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="435.0" y="376.5" text-anchor="middle">hr_agent</text>
+<text class="s" x="435.0" y="391.5" text-anchor="middle">HR knowledge base</text>
+<rect class="node c-grey" x="585" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="685.0" y="376.5" text-anchor="middle">smalltalk_agent</text>
+<text class="s" x="685.0" y="391.5" text-anchor="middle">greetings · out of scope</text>
+<rect class="node c-peach" x="835" y="350" width="200" height="60" rx="6"/>
+<text class="t mono" x="935.0" y="376.5" text-anchor="middle">status_agent</text>
+<text class="s" x="935.0" y="391.5" text-anchor="middle">create_agent · ReAct loop</text>
+<rect class="node c-blue2" x="105" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="180.0" y="482.5" text-anchor="middle">retriever</text>
+<text class="s" x="180.0" y="497.5" text-anchor="middle">Qdrant hybrid · LCEL RAG</text>
+<polyline class="edge dash" points="180,410 180,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="105,486 73,486 73,380 83,380" marker-end="url(#f1)"/>
+<rect class="node c-blue2" x="355" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="430.0" y="482.5" text-anchor="middle">retriever</text>
+<text class="s" x="430.0" y="497.5" text-anchor="middle">Qdrant hybrid · LCEL RAG</text>
+<polyline class="edge dash" points="430,410 430,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="355,486 323,486 323,380 333,380" marker-end="url(#f1)"/>
+<rect class="node c-peach2" x="855" y="460" width="150" height="52" rx="6"/>
+<text class="t mono" x="930.0" y="482.5" text-anchor="middle">status tools</text>
+<text class="s" x="930.0" y="497.5" text-anchor="middle">get_my_tickets · Jira</text>
+<polyline class="edge dash" points="930,410 930,458" marker-end="url(#f1)"/>
+<polyline class="edge" points="855,486 823,486 823,380 833,380" marker-end="url(#f1)"/>
+<polyline class="edge" points="270,410 270,550 450,550 450,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="520,410 520,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="685,410 685,578" marker-end="url(#f1)"/>
+<polyline class="edge" points="1020,410 1020,550 720,550 720,578" marker-end="url(#f1)"/>
+<text class="l" x="603" y="540" text-anchor="middle">partial_results</text>
+<rect class="node c-green" x="380" y="580" width="400" height="64" rx="6"/>
+<text class="t mono" x="580.0" y="608.5" text-anchor="middle">synthesizer</text>
+<text class="s" x="580.0" y="623.5" text-anchor="middle">synthesizer.py · [IT Agent] … labels → one LLM merge</text>
+<line class="edge" x1="820" y1="598" x2="860" y2="598"/><text class="s" x="868" y="602" text-anchor="start">edge</text>
+<line class="edge dash" x1="820" y1="620" x2="860" y2="620"/><text class="s" x="868" y="624" text-anchor="start">conditional edge</text>
+<rect class="node c-teal" x="290" y="700" width="220" height="56" rx="6"/>
+<text class="t mono" x="400.0" y="724.5" text-anchor="middle">final_answer</text>
+<text class="s" x="400.0" y="739.5" text-anchor="middle">one reply → employee (END)</text>
+<rect class="node c-sand" x="650" y="700" width="260" height="56" rx="6"/>
+<text class="t mono" x="780.0" y="717.0" text-anchor="middle">one follow-up (if needed)</text>
+<text class="s" x="780.0" y="732.0" text-anchor="middle">ticket_agent subgraph · offer_ticket ·</text>
+<text class="s" x="780.0" y="747.0" text-anchor="middle">status email</text>
+<polyline class="edge" points="500,644 500,672 400,672 400,698" marker-end="url(#f1)"/>
+<polyline class="edge dash" points="660,644 660,672 780,672 780,698" marker-end="url(#f1)"/>
+<rect class="side" x="12" y="330" width="34" height="200" rx="8"/>
+<text class="side-l" transform="translate(34,430) rotate(-90)" text-anchor="middle">agents run in parallel</text>
+</svg></div>
+      <figcaption>For a message with several parts, the router's <code>Send()</code> starts the matching agents at the same time, one part each. There is no extra node in between: each agent answers its part, calls its own retrieval or tools, and hands its output straight to the synthesizer, which runs once all of them finish. A single-part message takes one dashed edge to one agent, which replies to the employee directly; IT and HR offer a ticket when they can't answer. Ticket requests inside a multi-part message are started as the follow-up, because creating a ticket needs the employee's confirmation.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>2. Ticket creation subgraph</h2>
+    <figure>
+      <div class="scroll"><svg viewBox="0 0 1040 245" role="img" aria-label="Ticket agent subgraph: collect the email, draft the ticket with bind_tools, ask for details if vague, confirm with the employee, then create it in Jira."><defs><marker id="f3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="f3h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahh"/></marker></defs>
+<rect class="node hitl" x="20" y="70" width="160" height="56" rx="6"/>
+<text class="t mono" x="100.0" y="94.5" text-anchor="middle">collect_email</text>
+<text class="s" x="100.0" y="109.5" text-anchor="middle">asks for email</text>
+<rect class="node" x="240" y="70" width="180" height="56" rx="6"/>
+<text class="t mono" x="330.0" y="94.5" text-anchor="middle">draft_ticket</text>
+<text class="s" x="330.0" y="109.5" text-anchor="middle">LLM.bind_tools(create_ticket)</text>
+<rect class="node hitl" x="480" y="70" width="180" height="56" rx="6"/>
+<text class="t mono" x="570.0" y="94.5" text-anchor="middle">confirm_ticket</text>
+<text class="s" x="570.0" y="109.5" text-anchor="middle">“Shall I go ahead?”</text>
+<rect class="node" x="720" y="70" width="160" height="56" rx="6"/>
+<text class="t mono" x="800.0" y="94.5" text-anchor="middle">create_ticket</text>
+<text class="s" x="800.0" y="109.5" text-anchor="middle">runs approved call</text>
+<rect class="store" x="920" y="70" width="100" height="56" rx="6"/>
+<text class="t mono" x="970.0" y="94.5" text-anchor="middle">Jira</text>
+<text class="s" x="970.0" y="109.5" text-anchor="middle">+ SQLite</text>
+<rect class="node hitl" x="240" y="180" width="180" height="50" rx="6"/>
+<text class="t mono" x="330.0" y="201.5" text-anchor="middle">ask_details</text>
+<text class="s" x="330.0" y="216.5" text-anchor="middle">asks what&#x27;s wrong</text>
+<polyline class="edge" points="180,98 238,98" marker-end="url(#f3)"/>
+<text class="l" x="209" y="90" text-anchor="middle">email</text>
+<polyline class="edge" points="420,98 478,98" marker-end="url(#f3)"/>
+<text class="l" x="449" y="90" text-anchor="middle">draft</text>
+<polyline class="edge" points="660,98 718,98" marker-end="url(#f3)"/>
+<text class="l" x="689" y="90" text-anchor="middle">yes</text>
+<polyline class="edge" points="880,98 918,98" marker-end="url(#f3)"/>
+<polyline class="edge" points="290,126 290,178" marker-end="url(#f3)"/>
+<text class="l" x="282" y="158" text-anchor="end">too vague</text>
+<polyline class="edge" points="370,180 370,128" marker-end="url(#f3)"/>
+<text class="l" x="378" y="158" text-anchor="start">details</text>
+<polyline class="edge" points="570,70 570,34 330,34 330,68" marker-end="url(#f3)"/>
+<text class="l" x="450" y="27" text-anchor="middle">employee asks for changes</text>
+<polyline class="edge dash" points="800,126 800,160 600,160 600,128" marker-end="url(#f3)"/>
+<text class="l" x="700" y="176" text-anchor="middle">Jira down: try again?</text>
+</svg></div>
+      <figcaption>Compiled separately in <code>agents/ticket_graph.py</code> and added to the main graph as one node, sharing its state and checkpointer. The LLM only drafts the <code>create_ticket</code> tool call; the call runs after the employee says yes.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>3. Ticket status agent</h2>
+    <figure>
+      <div class="scroll"><svg viewBox="0 0 1040 275" role="img" aria-label="Status agent: one LangChain agent loops between the model and its tools; the employee&#x27;s verified email is injected into the tools, which only return that employee&#x27;s own Jira tickets."><defs><marker id="f4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="f4h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ahh"/></marker></defs>
+<rect class="node" x="20" y="80" width="140" height="56" rx="6"/>
+<text class="t mono" x="90.0" y="97.0" text-anchor="middle">router</text>
+<text class="s" x="90.0" y="112.0" text-anchor="middle">“status of my</text>
+<text class="s" x="90.0" y="127.0" text-anchor="middle">tickets?”</text>
+<rect class="frame" x="200" y="40" width="560" height="140" rx="10"/>
+<text class="frame-l" x="216" y="62">status_agent · LangChain create_agent</text>
+<rect class="node" x="230" y="80" width="170" height="64" rx="6"/>
+<text class="t mono" x="315.0" y="101.0" text-anchor="middle">model</text>
+<text class="s" x="315.0" y="116.0" text-anchor="middle">ChatOpenAI</text>
+<text class="s" x="315.0" y="131.0" text-anchor="middle">retry · fallback · call limit</text>
+<rect class="node hitl" x="500" y="74" width="230" height="78" rx="6"/>
+<text class="t mono" x="615.0" y="94.5" text-anchor="middle">status tools</text>
+<text class="s" x="615.0" y="109.5" text-anchor="middle">get_my_tickets</text>
+<text class="s" x="615.0" y="124.5" text-anchor="middle">get_ticket_details</text>
+<text class="s" x="615.0" y="139.5" text-anchor="middle">ask_employee  (pauses)</text>
+<polyline class="edge" points="160,108 228,108" marker-end="url(#f4)"/>
+<polyline class="edge" points="400,98 498,98" marker-end="url(#f4)"/>
+<text class="l" x="449" y="90" text-anchor="middle">tool_calls</text>
+<polyline class="edge" points="498,128 402,128" marker-end="url(#f4)"/>
+<text class="l" x="449" y="145" text-anchor="middle">results</text>
+<rect class="store" x="500" y="210" width="230" height="50" rx="6"/>
+<text class="t mono" x="615.0" y="231.5" text-anchor="middle">verified email</text>
+<text class="s" x="615.0" y="246.5" text-anchor="middle">InjectedState · hidden from LLM</text>
+<polyline class="edge" points="615,210 615,154" marker-end="url(#f4)"/>
+<rect class="store" x="840" y="74" width="180" height="78" rx="6"/>
+<text class="t mono" x="930.0" y="102.0" text-anchor="middle">Jira Cloud</text>
+<text class="s" x="930.0" y="117.0" text-anchor="middle">requester label</text>
+<text class="s" x="930.0" y="132.0" text-anchor="middle">+ owner check in code</text>
+<polyline class="edge" points="730,113 838,113" marker-end="url(#f4)"/>
+<text class="l" x="785" y="105" text-anchor="middle">own tickets only</text>
+<rect class="node" x="230" y="210" width="170" height="50" rx="6"/>
+<text class="t mono" x="315.0" y="231.5" text-anchor="middle">status_fallback</text>
+<text class="s" x="315.0" y="246.5" text-anchor="middle">no-LLM path</text>
+<polyline class="edge dash" points="315,144 315,208" marker-end="url(#f4)"/>
+<text class="l" x="323" y="182" text-anchor="start">LLM down</text>
+<polyline class="edge dash" points="200,160 110,160 110,138" marker-end="url(#f4)"/>
+<text class="l" x="30" y="176" text-anchor="start">end_status_check</text>
+</svg></div>
+      <figcaption>The tools have no email argument, so the model can't ask for someone else's tickets: the verified email is injected from state, and each ticket's owner is checked in code before anything is shown. <code>ask_employee</code> pauses inside the tool to ask for the email or which ticket.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Where it lives in the code</h2>
+    <div class="files">
+      <div><code>agents/graph.py</code><span>builds the graph, MemorySaver, SmartDeskChat</span></div>
+      <div><code>agents/orchestrator.py</code><span>router, RouteDecision, keyword fallback, Send() fan-out</span></div>
+      <div><code>agents/synthesizer.py</code><span>synthesizer_node and the branch helpers the agents use</span></div>
+      <div><code>agents/kb_agent.py · rag_chain.py</code><span>IT / HR answers with score gate and escalation</span></div>
+      <div><code>agents/ticket_graph.py · ticket_agent.py</code><span>ticket creation subgraph and its nodes</span></div>
+      <div><code>agents/status_agent.py</code><span>create_agent with middleware, no-LLM fallback</span></div>
+      <div><code>tools/registry.py</code><span>which tools each agent binds</span></div>
+      <div><code>agents/prompts.py</code><span>every prompt and fixed message</span></div>
+    </div>
+  </section>
+</main>

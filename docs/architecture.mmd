@@ -1,0 +1,53 @@
+%% SmartDesk AI – router -> parallel agents -> synthesizer
+%% Solid arrows: edges · dashed arrows: conditional edges (Send() / Command(goto=...))
+flowchart TD
+    IN["<b>Employee message</b><br/>CLI main.py / Streamlit"] --> CHAT["<b>SmartDeskChat</b><br/>send() · resume()"]
+    MEM["<b>MemorySaver</b><br/>session memory per thread_id"]
+    CHAT --> ROUTER
+    MEM --> ROUTER
+    ROUTER["<b>router (orchestrator)</b><br/>orchestrator.py · Pydantic RouteDecision<br/>splits a message into parts"]
+
+    %% agents run in parallel — the router Send()s one part to each agent
+        IT["<b>it_agent</b><br/>IT knowledge base"]
+        HR["<b>hr_agent</b><br/>HR knowledge base"]
+        SM["<b>smalltalk_agent</b><br/>greetings · out of scope"]
+        ST["<b>status_agent</b><br/>create_agent · ReAct loop"]
+        ITR["<b>retriever</b><br/>Qdrant hybrid · LCEL RAG"]
+        HRR["<b>retriever</b><br/>Qdrant hybrid · LCEL RAG"]
+        STT["<b>status tools</b><br/>get_my_tickets · Jira"]
+        IT -.-> ITR --> IT
+        HR -.-> HRR --> HR
+        ST -.-> STT --> ST
+
+    ROUTER -. "Send() · parts run in parallel" .-> IT
+    ROUTER -.-> HR
+    ROUTER -.-> SM
+    ROUTER -.-> ST
+
+    IT -- partial_results ---> SYN
+    HR ---> SYN
+    SM ---> SYN
+    ST ---> SYN
+    SYN["<b>synthesizer</b><br/>synthesizer.py · [IT Agent] … labels → one LLM merge"]
+
+    SYN --> OUT["<b>final_answer</b><br/>one reply → employee (END)"]
+    SYN -.-> FU["<b>one follow-up (if needed)</b><br/>ticket_agent subgraph · offer_ticket · status email"]
+
+    classDef teal fill:#e2f3ef,stroke:#3f8a80,color:#17232b
+    classDef sand fill:#f1ede4,stroke:#8c7d62,color:#17232b
+    classDef violet fill:#ece9fb,stroke:#6f5fd0,stroke-width:2px,color:#17232b
+    classDef blue fill:#e5effa,stroke:#3f7cc0,color:#17232b
+    classDef tool fill:#ffffff,stroke:#3f7cc0,color:#17232b
+    classDef grey fill:#eef1f3,stroke:#7d8b94,color:#17232b
+    classDef peach fill:#fbebe4,stroke:#c8714f,color:#17232b
+    classDef peachtool fill:#ffffff,stroke:#c8714f,color:#17232b
+    classDef green fill:#e8f2dc,stroke:#6c9a3a,stroke-width:2px,color:#17232b
+    class IN,CHAT,OUT teal
+    class MEM,FU sand
+    class ROUTER violet
+    class IT,HR blue
+    class ITR,HRR tool
+    class SM grey
+    class ST peach
+    class STT peachtool
+    class SYN green

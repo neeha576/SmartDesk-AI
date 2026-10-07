@@ -1,0 +1,193 @@
+[
+  {
+    "question": "How do I reset my password?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-001"
+  },
+  {
+    "question": "How do I connect to the VPN?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-002"
+  },
+  {
+    "question": "I lost my phone with Authenticator on it",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-003"
+  },
+  {
+    "question": "How do I request an Adobe license?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-004"
+  },
+  {
+    "question": "How do I get Wi-Fi for a visitor?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-005"
+  },
+  {
+    "question": "Can I use Gmail app for work email?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "IT-006"
+  },
+  {
+    "question": "When do I get my laptop?",
+    "expected": "answer",
+    "domain": "IT",
+    "source_doc": "ONB-002"
+  },
+  {
+    "question": "How many sick days do I get per year?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-001"
+  },
+  {
+    "question": "What is the WFH policy?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-002"
+  },
+  {
+    "question": "Does NMTech match 401(k) contributions?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "ONB-003"
+  },
+  {
+    "question": "What is the maternity policy?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-001"
+  },
+  {
+    "question": "How do I submit a reimbursement?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-003"
+  },
+  {
+    "question": "Can I accept a $150 gift from a vendor?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-004"
+  },
+  {
+    "question": "How do I report harassment?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-005"
+  },
+  {
+    "question": "When do merit increases take effect?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-006"
+  },
+  {
+    "question": "What do I do on my first day?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "ONB-001"
+  },
+  {
+    "question": "How do I enroll in insurance?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "ONB-003"
+  },
+  {
+    "question": "How long is the probation period?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "ONB-005"
+  },
+  {
+    "question": "When is payday?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "PAY-001"
+  },
+  {
+    "question": "How do I update my W-4?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "PAY-002"
+  },
+  {
+    "question": "How does vesting work?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "PAY-004"
+  },
+  {
+    "question": "Can I work from Mexico for a month?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-002"
+  },
+  {
+    "question": "Can I get paid for unused sick leave?",
+    "expected": "answer",
+    "domain": "HR",
+    "source_doc": "HR-001"
+  },
+  {
+    "question": "My monitor has been flickering for two days.",
+    "expected": "escalate",
+    "domain": "IT"
+  },
+  {
+    "question": "How do I add the office printer?",
+    "expected": "escalate",
+    "domain": "IT"
+  },
+  {
+    "question": "My laptop battery drains in an hour.",
+    "expected": "escalate",
+    "domain": "IT"
+  },
+  {
+    "question": "How do I book a meeting room?",
+    "expected": "escalate",
+    "domain": "IT"
+  },
+  {
+    "question": "Where can I park at the office?",
+    "expected": "escalate",
+    "domain": "HR"
+  },
+  {
+    "question": "Is there a relocation allowance for moving to Albuquerque?",
+    "expected": "escalate",
+    "domain": "HR"
+  },
+  {
+    "question": "Can I take a 3-month sabbatical?",
+    "expected": "escalate",
+    "domain": "HR"
+  },
+  {
+    "question": "How much is the referral bonus?",
+    "expected": "escalate",
+    "domain": "HR"
+  },
+  {
+    "question": "Does NMTech pay for a gym membership?",
+    "expected": "escalate",
+    "domain": "HR"
+  },
+  {
+    "question": "What's the weather in Albuquerque today?",
+    "expected": "out_of_scope"
+  },
+  {
+    "question": "Who won the Lobos game last night?",
+    "expected": "out_of_scope"
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "id": "HR-QA-001",
+    "question": "How many sick days do I get per year?",
+    "answer": "8 days (64 hours) of sick leave per year, available from your first day. Unused sick leave carries over up to 8 days (64 hours), but it is never paid out.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-002",
+    "question": "How much PTO do I get?",
+    "answer": "15 days (120 hours) per year, accruing at 1.25 days (10 hours) per month from your first day. You can use it after your 90-day introductory period.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-003",
+    "question": "Can I carry over unused sick leave and get paid for it?",
+    "answer": "You can carry over up to 8 days (64 hours) of unused sick leave, but sick leave is never paid out – not at year end and not when you leave. Only PTO can be cashed out.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-004",
+    "question": "What happens to my unused PTO at the end of the year?",
+    "answer": "You can carry over up to 5 days into the next year and cash out up to 5 more in December (paid in the January paycheck). Anything else is forfeited on December 31.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-005",
+    "question": "Will I get paid for my unused PTO if I resign?",
+    "answer": "Yes. Accrued, unused PTO is paid out in your final paycheck when you leave NMTech. Unused sick leave is not paid out.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-006",
+    "question": "Do I need a doctor's note for sick leave?",
+    "answer": "Only if you are out sick for more than 3 consecutive days.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-007",
+    "question": "How much parental (maternity or paternity) leave does NMTech offer?",
+    "answer": "12 weeks of fully paid leave for the birthing parent and 6 weeks for a non-birthing or adoptive parent. You're eligible after 90 days of employment, and the leave must be taken within 12 months of the birth or placement.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-008",
+    "question": "How many company holidays are there?",
+    "answer": "10 company holidays a year, plus 2 floating holidays you choose yourself. The holiday calendar is published in NMTech HR every December.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-009",
+    "question": "I'm salaried and worked on a company holiday. Do I get a day off?",
+    "answer": "If your manager asked you to work, exempt employees get 1 substitute day off, to be used within 60 days. Hourly employees are paid 1.5 times their regular rate instead.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-010",
+    "question": "How do I request time off?",
+    "answer": "Request it in NMTech HR → Time Off. Give at least 2 weeks' notice for absences longer than 3 days and at least 2 days' notice otherwise. For sick days, tell your manager before your start time and record it when you're back.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "procedural",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-011",
+    "question": "Am I eligible for FMLA?",
+    "answer": "FMLA gives up to 12 weeks of unpaid, job-protected leave if you have at least 12 months of service and 1,250 hours worked in the past year. Email hr-help@nmtech.com to start a request.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-012",
+    "question": "What is the work-from-home policy?",
+    "answer": "NMTech is hybrid: 3 office days a week at the Albuquerque HQ (Tuesday–Thursday are anchor days) and 2 remote days. Core hours are 10:00 AM – 3:00 PM Mountain Time. New hires work from the office for their first 4 weeks.",
+    "domain": "HR",
+    "topic": "Remote Work",
+    "question_type": "factual",
+    "source_doc": "HR-002"
+  },
+  {
+    "id": "HR-QA-013",
+    "question": "Can I work from another state for a few weeks?",
+    "answer": "Yes, for up to 30 days per calendar year with your manager's approval. Record it in NMTech HR → Work Location before you go so payroll can withhold the right state taxes.",
+    "domain": "HR",
+    "topic": "Remote Work",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-002"
+  },
+  {
+    "id": "HR-QA-014",
+    "question": "Can I work from Mexico for a month?",
+    "answer": "Not without written approval from HR and Legal. Working from outside the United States raises tax, immigration and data-protection issues.",
+    "domain": "HR",
+    "topic": "Remote Work",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-002"
+  },
+  {
+    "id": "HR-QA-015",
+    "question": "Is there an internet stipend for remote work?",
+    "answer": "Yes, $50 per month, claimed through NMTech HR → Expenses.",
+    "domain": "HR",
+    "topic": "Remote Work",
+    "question_type": "factual",
+    "source_doc": "HR-002"
+  },
+  {
+    "id": "HR-QA-016",
+    "question": "Can I expense a home office chair?",
+    "answer": "Yes. There's a one-time home office stipend of up to $500 for ergonomic equipment, claimable after your 90-day introductory period.",
+    "domain": "HR",
+    "topic": "Remote Work",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-002"
+  },
+  {
+    "id": "HR-QA-017",
+    "question": "How do I submit an expense reimbursement?",
+    "answer": "Go to NMTech HR → Expenses → New Claim, choose the category, enter the date, amount and purpose, upload the receipt (required over $25) and submit. Your manager approves, then Finance reviews.",
+    "domain": "HR",
+    "topic": "Reimbursement",
+    "question_type": "procedural",
+    "source_doc": "HR-003"
+  },
+  {
+    "id": "HR-QA-018",
+    "question": "When will I be reimbursed?",
+    "answer": "Approved claims are paid by direct deposit with your next paycheck if Finance approves them at least 5 business days before payday; later approvals are paid the following payday.",
+    "domain": "HR",
+    "topic": "Reimbursement",
+    "question_type": "factual",
+    "source_doc": "HR-003"
+  },
+  {
+    "id": "HR-QA-019",
+    "question": "I forgot to submit an expense from two months ago. Can I still claim it?",
+    "answer": "Claims must be submitted within 30 days of the expense. Older claims are rejected unless your department head approves the delay.",
+    "domain": "HR",
+    "topic": "Reimbursement",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-003"
+  },
+  {
+    "id": "HR-QA-020",
+    "question": "How much is mileage reimbursement?",
+    "answer": "Business miles driven in your personal car are reimbursed at the current IRS standard mileage rate. Your daily commute to the office is not reimbursable.",
+    "domain": "HR",
+    "topic": "Reimbursement",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-003"
+  },
+  {
+    "id": "HR-QA-021",
+    "question": "What is the limit for client meals?",
+    "answer": "$75 per person per meal. List the attendees on the claim.",
+    "domain": "HR",
+    "topic": "Reimbursement",
+    "question_type": "factual",
+    "source_doc": "HR-003"
+  },
+  {
+    "id": "HR-QA-022",
+    "question": "What is the limit for gifts from vendors?",
+    "answer": "Up to $100 per person per year from any single business partner. Cash, gift cards and vouchers may never be accepted.",
+    "domain": "HR",
+    "topic": "Code of Conduct",
+    "question_type": "factual",
+    "source_doc": "HR-004"
+  },
+  {
+    "id": "HR-QA-023",
+    "question": "Can I take a freelance job on the side?",
+    "answer": "Only with written approval from your manager and HR before you start, and never for work that competes with NMTech.",
+    "domain": "HR",
+    "topic": "Code of Conduct",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-004"
+  },
+  {
+    "id": "HR-QA-024",
+    "question": "How do I report an ethics concern anonymously?",
+    "answer": "Use the anonymous Ethics Hotline (link in NMTech HR). You can also email ethics@nmtech.com or speak to your manager or HR. NMTech does not tolerate retaliation.",
+    "domain": "HR",
+    "topic": "Code of Conduct",
+    "question_type": "procedural",
+    "source_doc": "HR-004"
+  },
+  {
+    "id": "HR-QA-025",
+    "question": "How do I report harassment?",
+    "answer": "Report it to any manager, to People Operations at hr-help@nmtech.com, to conduct@nmtech.com, or through the anonymous Ethics Hotline – you don't have to go through your own manager. HR acknowledges reports within 2 business days and most investigations finish within 30 days.",
+    "domain": "HR",
+    "topic": "Anti-Harassment",
+    "question_type": "procedural",
+    "source_doc": "HR-005"
+  },
+  {
+    "id": "HR-QA-026",
+    "question": "Will I get in trouble for reporting harassment?",
+    "answer": "No. Retaliation against anyone who reports or takes part in an investigation is itself a violation of the policy, and information is shared only with those who need it.",
+    "domain": "HR",
+    "topic": "Anti-Harassment",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-005"
+  },
+  {
+    "id": "HR-QA-027",
+    "question": "When is the performance review?",
+    "answer": "The performance year follows the calendar year. There's a mid-year check-in in July, the annual review in December, ratings shared in February, and merit increases effective March 1.",
+    "domain": "HR",
+    "topic": "Performance Review",
+    "question_type": "factual",
+    "source_doc": "HR-006"
+  },
+  {
+    "id": "HR-QA-028",
+    "question": "I joined in November. Will I be part of this year's review?",
+    "answer": "No. Only employees who joined on or before October 1 take part in that year's cycle; you'll be reviewed in the following cycle.",
+    "domain": "HR",
+    "topic": "Performance Review",
+    "question_type": "policy_interpretation",
+    "source_doc": "HR-006"
+  },
+  {
+    "id": "HR-QA-029",
+    "question": "What do I do on my first day?",
+    "answer": "Report to lobby reception at the Albuquerque headquarters at 8:30 AM for your badge, pick up your laptop at the IT desk at 9:00 AM, attend HR orientation at 10:00 AM, and join your team for lunch at noon.",
+    "domain": "HR",
+    "topic": "Onboarding",
+    "question_type": "procedural",
+    "source_doc": "ONB-001"
+  },
+  {
+    "id": "HR-QA-030",
+    "question": "What documents should I bring on my first day?",
+    "answer": "Original, unexpired documents for Form I-9 – for example a U.S. passport, or a driver's license plus a Social Security card – and your bank details if you haven't set up direct deposit yet.",
+    "domain": "HR",
+    "topic": "Onboarding",
+    "question_type": "factual",
+    "source_doc": "ONB-001"
+  },
+  {
+    "id": "HR-QA-031",
+    "question": "How do I enroll in health insurance?",
+    "answer": "Go to NMTech HR → Benefits → Enroll within 30 days of your start date, choose the PPO or HDHP medical plan plus dental and vision, add dependents, and submit. Coverage starts on your first day.",
+    "domain": "HR",
+    "topic": "Benefits",
+    "question_type": "procedural",
+    "source_doc": "ONB-003"
+  },
+  {
+    "id": "HR-QA-032",
+    "question": "Does NMTech match 401(k) contributions?",
+    "answer": "Yes. NMTech matches 100% of the first 4% of base salary you contribute, and the match vests immediately.",
+    "domain": "HR",
+    "topic": "Benefits",
+    "question_type": "factual",
+    "source_doc": "ONB-003"
+  },
+  {
+    "id": "HR-QA-033",
+    "question": "How much does NMTech put into my HSA?",
+    "answer": "If you choose the HDHP, NMTech contributes $1,000 a year for employee-only coverage or $2,000 a year for family coverage.",
+    "domain": "HR",
+    "topic": "Benefits",
+    "question_type": "factual",
+    "source_doc": "ONB-003"
+  },
+  {
+    "id": "HR-QA-034",
+    "question": "Can I add my kids to my health insurance?",
+    "answer": "Yes. You can cover your spouse or registered domestic partner and children up to age 26. Add a new child within 30 days of birth or adoption.",
+    "domain": "HR",
+    "topic": "Benefits",
+    "question_type": "policy_interpretation",
+    "source_doc": "ONB-003"
+  },
+  {
+    "id": "HR-QA-035",
+    "question": "What is the buddy program?",
+    "answer": "Every new hire is paired with a buddy (not your manager) who helps you settle in for 90 days, checking in weekly in the first month and every two weeks after that. You and your buddy can claim up to $50 for a lunch together.",
+    "domain": "HR",
+    "topic": "Buddy Program",
+    "question_type": "factual",
+    "source_doc": "ONB-004"
+  },
+  {
+    "id": "HR-QA-036",
+    "question": "How long is the probation period?",
+    "answer": "NMTech has a 90-day introductory period, with a review around day 75. It can be extended once by up to 30 days.",
+    "domain": "HR",
+    "topic": "Introductory Period",
+    "question_type": "factual",
+    "source_doc": "ONB-005"
+  },
+  {
+    "id": "HR-QA-037",
+    "question": "How much notice do I need to give if I resign?",
+    "answer": "Employment is at-will, but NMTech asks for 2 weeks' notice if you resign.",
+    "domain": "HR",
+    "topic": "Introductory Period",
+    "question_type": "factual",
+    "source_doc": "ONB-005"
+  },
+  {
+    "id": "HR-QA-038",
+    "question": "When is payday?",
+    "answer": "Every other Friday – 26 paychecks a year, by direct deposit. Pay stubs appear in NMTech HR on payday.",
+    "domain": "HR",
+    "topic": "Payroll",
+    "question_type": "factual",
+    "source_doc": "PAY-001"
+  },
+  {
+    "id": "HR-QA-039",
+    "question": "When will I get my first paycheck?",
+    "answer": "On the first payday after your first pay period ends – usually 1 to 3 weeks after your start date.",
+    "domain": "HR",
+    "topic": "Payroll",
+    "question_type": "policy_interpretation",
+    "source_doc": "PAY-001"
+  },
+  {
+    "id": "HR-QA-040",
+    "question": "How do I update my tax withholding?",
+    "answer": "Update your Form W-4 in NMTech HR → Pay → Tax Forms at any time. Changes made at least 5 business days before payday apply to that paycheck. New Mexico state tax is withheld based on your W-4.",
+    "domain": "HR",
+    "topic": "Tax",
+    "question_type": "procedural",
+    "source_doc": "PAY-002"
+  },
+  {
+    "id": "HR-QA-041",
+    "question": "When will I get my W-2?",
+    "answer": "Your W-2 is available in NMTech HR by January 31. If you didn't consent to electronic delivery, a paper copy is mailed to your home address.",
+    "domain": "HR",
+    "topic": "Tax",
+    "question_type": "factual",
+    "source_doc": "PAY-002"
+  },
+  {
+    "id": "HR-QA-042",
+    "question": "How is my bonus calculated?",
+    "answer": "Your target bonus is 10% of base salary for most roles, multiplied by your rating: 150% for a 5, 120% for a 4, 100% for a 3, 50% for a 2 and 0% for a 1. For example, a $90,000 salary with a 4 rating pays $10,800. It's paid by March 15.",
+    "domain": "HR",
+    "topic": "Compensation",
+    "question_type": "factual",
+    "source_doc": "PAY-003"
+  },
+  {
+    "id": "HR-QA-043",
+    "question": "What comes out of my paycheck?",
+    "answer": "Federal income tax, Social Security (6.2%), Medicare (1.45%), New Mexico state income tax, and pre-tax deductions for 401(k), medical, dental, vision and HSA.",
+    "domain": "HR",
+    "topic": "Compensation",
+    "question_type": "factual",
+    "source_doc": "PAY-003"
+  },
+  {
+    "id": "HR-QA-044",
+    "question": "How does vesting work?",
+    "answer": "Options vest over 4 years with a 1-year cliff: 25% vests on the first anniversary, then 6.25% every quarter for the next 3 years.",
+    "domain": "HR",
+    "topic": "Stock Options",
+    "question_type": "factual",
+    "source_doc": "PAY-004"
+  },
+  {
+    "id": "HR-QA-045",
+    "question": "What happens to my stock options if I resign?",
+    "answer": "Unvested options are cancelled on your last day. Vested options must be exercised within 90 days of your last day or they are cancelled.",
+    "domain": "HR",
+    "topic": "Stock Options",
+    "question_type": "policy_interpretation",
+    "source_doc": "PAY-004"
+  },
+  {
+    "id": "HR-QA-046",
+    "question": "What is the maternity leave policy?",
+    "answer": "The birthing parent gets 12 weeks of fully paid parental (maternity) leave, after 90 days of employment. It must be taken within 12 months of the birth and can be split into up to two blocks; for eligible employees it runs at the same time as FMLA leave.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  },
+  {
+    "id": "HR-QA-047",
+    "question": "How much paternity leave do I get?",
+    "answer": "A non-birthing parent gets 6 weeks of fully paid parental (paternity) leave, after 90 days of employment, taken within 12 months of the birth or placement. Adoptive parents get the same 6 weeks.",
+    "domain": "HR",
+    "topic": "Time Off",
+    "question_type": "factual",
+    "source_doc": "HR-001"
+  }
+]
