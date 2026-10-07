@@ -60,7 +60,8 @@ class AgentState(TypedDict, total=False):
 
     # RAG results of the last knowledge-base answer
     retrieved_chunks: list
-    confidence: Optional[float]     # top dense similarity score
+    confidence: Optional[float]     # top dense similarity score (or cache similarity on a cache hit)
+    cache_hit: Optional[bool]       # answer came from the semantic cache (memory/semantic_cache.py)
     sources: list                   # doc_ids retrieved
 
     # Escalation (KB couldn't answer -> offer a ticket, human-in-the-loop via interrupt)

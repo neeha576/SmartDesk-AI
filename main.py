@@ -55,7 +55,8 @@ def main():
             score = s.get("confidence")
             print(f"   [route={s.get('route')} ({s.get('route_reason')}) domain={s.get('domain')} "
                   f"score={round(score, 3) if isinstance(score, float) else '-'} "
-                  f"escalation={s.get('escalation_reason') or 'none'} waiting_for={chat.waiting_for()} "
+                  f"escalation={s.get('escalation_reason') or 'none'} cache_hit={bool(s.get('cache_hit'))} "
+                  f"waiting_for={chat.waiting_for()} "
                   f"email={s.get('employee_email')}]\n")
 
 

@@ -291,6 +291,29 @@ python scripts/seed_tickets.py jane@nmtech.com    # create 3 sample tickets (+ a
 Qdrant stores a dense embedding and a BM25 sparse vector for every chunk in one collection.
 Search runs both and merges them with Qdrant's built-in Reciprocal Rank Fusion (hybrid search).
 
+## Semantic cache (repeated questions)
+Similar IT/HR questions are answered from a cache instead of running retrieval and the LLM again
+(`memory/semantic_cache.py`). "How many sick days do I get?" and "what's my annual sick leave allowance?" share one
+cached answer.
+
+- **How:** the question is embedded with the same model as the knowledge base and compared with earlier
+  questions in a separate Qdrant collection (`smartdesk_cache`). If the closest one in the **same domain** scores at
+  least `CACHE_THRESHOLD` (cosine, default 0.93), its answer is returned. The check happens inside the IT/HR agent,
+  after routing, so ticket flows, status checks and privacy rules are unaffected. The question's embedding is
+  reused by retrieval on a miss, so a miss costs no extra embedding call.
+- **Only good answers are cached:** confident, grounded knowledge-base answers. Never: "couldn't find it" /
+  partial answers / ticket offers, ticket status or creation (personal), small talk, or short follow-ups that
+  depend on the conversation ("what about on a Mac?").
+- **Staying correct:** every entry stores the knowledge-base version (hash of `knowledge_base/`), so entries from an
+  older KB are ignored; `scripts/build_index.py` also clears the cache on re-index; entries expire after
+  `CACHE_TTL_HOURS` (default 168). Any cache error counts as a miss.
+- **Settings (.env):** `SEMANTIC_CACHE_ENABLED=true`, `CACHE_THRESHOLD=0.93`, `CACHE_TTL_HOURS=168`,
+  `CACHE_COLLECTION=smartdesk_cache`.
+- **Tuning:** `python scripts/cache_check.py` prints similarity scores for paraphrases vs. different questions
+  with your embedding model – keep the threshold above every "different" score.
+- **Seeing it work:** `python main.py --debug` shows `cache_hit=True`, and the log line `Cache HIT (HR, 0.95): …`;
+  in the web UI turn on *Show routing details*. Tests: `tests/test_semantic_cache.py`.
+
 ## Environment variables
 See `.env.example`.
 

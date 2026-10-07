@@ -110,7 +110,7 @@ def route_message(state: AgentState) -> dict:
     return {
         "route": "parallel" if parallel else decision.agent, "route_reason": decision.reason, "domain": domain,
         "route_tasks": tasks if parallel else [], "partial_results": None, "status_query": None,
-        "final_answer": None,
+        "final_answer": None, "cache_hit": False,
         # per-turn resets
         "reroute_to": None, "rerouted": False, "needs_escalation": False, "escalation_reason": None,
         "change_request": None, "email_invalid": False, "ticket_error": None,

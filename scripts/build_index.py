@@ -98,6 +98,10 @@ def main():
         n = upsert_chunks(client, chunks, dense_vecs, sparse_vecs)
         total = client.count(COLLECTION, exact=True).count
         print(f"Upserted {n} points into '{COLLECTION}' (collection now holds {total}).")
+        # cached answers may be out of date now – start the semantic cache fresh
+        from memory.semantic_cache import SemanticCache
+        SemanticCache(client, dense).clear()
+        print("Semantic cache cleared.")
         if not args.skip_check:
             sample_check(client, dense)
     finally:

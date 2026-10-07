@@ -1,9 +1,26 @@
 """Knowledge-base search tool (hybrid: dense + BM25, RRF fusion)."""
 from __future__ import annotations
 
+from functools import lru_cache
+
 from config import settings
 
 _retriever = None
+
+
+class _MemoQueryEmbedder:
+    """Wraps the dense embedder so the same question is embedded once – the semantic cache lookup and
+    the retrieval that follows a cache miss share one embedding call."""
+
+    def __init__(self, embedder, size: int = 256):
+        self._inner = embedder
+        self._cached = lru_cache(maxsize=size)(lambda text: tuple(embedder.embed_query(text)))
+
+    def embed_query(self, text: str) -> list[float]:
+        return list(self._cached(text))
+
+    def __getattr__(self, name):
+        return getattr(self._inner, name)
 
 
 def _get_retriever():
@@ -11,7 +28,7 @@ def _get_retriever():
     if _retriever is None:
         from rag.embeddings import get_dense_embedder, get_sparse_embedder
         from rag.retriever import HybridRetriever
-        _retriever = HybridRetriever(get_dense_embedder(), get_sparse_embedder())
+        _retriever = HybridRetriever(_MemoQueryEmbedder(get_dense_embedder()), get_sparse_embedder())
     return _retriever
 
 

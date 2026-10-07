@@ -73,6 +73,12 @@ CONFIDENCE_THRESHOLD = float(os.getenv("CONFIDENCE_THRESHOLD", "0.30"))  # min t
 RETRIEVAL_TOP_K = int(os.getenv("RETRIEVAL_TOP_K", "5"))
 HISTORY_TURNS = int(os.getenv("HISTORY_TURNS", "6"))  # past messages sent to the LLM
 
+# --- Semantic cache (memory/semantic_cache.py) -------------------------------------------------
+SEMANTIC_CACHE_ENABLED = os.getenv("SEMANTIC_CACHE_ENABLED", "true").lower() == "true"
+CACHE_COLLECTION = os.getenv("CACHE_COLLECTION", "smartdesk_cache")
+CACHE_THRESHOLD = float(os.getenv("CACHE_THRESHOLD", "0.93"))   # min cosine similarity to reuse an answer
+CACHE_TTL_HOURS = float(os.getenv("CACHE_TTL_HOURS", "168"))    # cached answers expire after a week
+
 # --- Ticketing (Jira) ---
 USE_MOCK_TICKETING = os.getenv("USE_MOCK_TICKETING", "false").lower() == "true"
 JIRA_ISSUE_TYPE = os.getenv("JIRA_ISSUE_TYPE", "Task")

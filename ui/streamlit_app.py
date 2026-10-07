@@ -221,7 +221,8 @@ if debug:
     score = s.get("confidence")
     st.caption(f"route: `{s.get('route')}` ({s.get('route_reason') or '-'}) · domain: `{s.get('domain')}` · "
                f"score: `{round(score, 3) if isinstance(score, float) else '-'}` · "
-               f"escalation: `{s.get('escalation_reason') or 'none'}` · waiting for: `{waiting}` · "
+               f"escalation: `{s.get('escalation_reason') or 'none'}` · cache hit: `{bool(s.get('cache_hit'))}` · "
+               f"waiting for: `{waiting}` · "
                f"email: `{s.get('employee_email')}`")
 
 if prompt := st.chat_input("Ask an IT or HR question, or describe a problem…"):

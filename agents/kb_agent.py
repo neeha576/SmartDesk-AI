@@ -24,6 +24,7 @@ from agents.llm import get_llm
 from agents.rag_chain import build_rag_chain
 from agents.state import AgentState
 from config import settings
+from memory.semantic_cache import get_cache
 from rag.confidence import answer_gate
 from rag.lc_retriever import SmartDeskRetriever, docs_to_chunks
 
@@ -39,6 +40,14 @@ def _get_retriever(domain: str):
 
 def _get_llm():
     return get_llm()
+
+
+def _get_cache():
+    try:
+        return get_cache()
+    except Exception as e:  # noqa: BLE001 – no cache is fine; answering must still work
+        log.warning("Semantic cache unavailable: %s", e)
+        return None
 
 
 # ---------------------------------------------------------------------------- helpers
@@ -93,13 +102,20 @@ def answer_from_kb(state: AgentState, domain: str, system_prompt: str) -> AgentS
     question = _last_user_message(messages)
     state = {**state, "reroute_to": None, "needs_escalation": False, "escalation_reason": None}
 
+    query = _retrieval_query(messages)
+    # Semantic cache: only for stand-alone questions (a short follow-up depends on the conversation)
+    cache = _get_cache() if query == question else None
+    if cache and (hit := cache.lookup(question, domain)):
+        return _reply(state, hit["answer"], domain=domain, retrieved_chunks=[], confidence=hit["score"],
+                      sources=hit["sources"], cache_hit=True)
+
     chain = build_rag_chain(_get_retriever(domain), _get_llm(), system_prompt)
-    inputs = {"query": _retrieval_query(messages), "question": question, "history": _history(messages)}
+    inputs = {"query": query, "question": question, "history": _history(messages)}
 
     out = chain.invoke(inputs)   # retriever and LLM failures are both handled inside the chain
     chunks = docs_to_chunks(out["docs"])
     common = {"retrieved_chunks": chunks, "confidence": out["top_score"],
-              "sources": list(dict.fromkeys(c["doc_id"] for c in chunks))}
+              "sources": list(dict.fromkeys(c["doc_id"] for c in chunks)), "cache_hit": False}
 
     # Retrieval gates (no results / below threshold) – the chain skipped the LLM
     if out["gate"]:
@@ -123,5 +139,7 @@ def answer_from_kb(state: AgentState, domain: str, system_prompt: str) -> AgentS
     if reason == "partial_answer":
         return _offer_ticket(state, domain, reason, question, prefix=answer, **common)
 
-    # Confident, grounded answer
+    # Confident, grounded answer – remember it for similar questions
+    if cache:
+        cache.store(question, domain, answer, common["sources"])
     return _reply(state, answer, domain=domain, **common)

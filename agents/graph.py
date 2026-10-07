@@ -52,7 +52,7 @@ from agents.status_agent import status_agent, status_fallback
 from agents.ticket_agent import offer_ticket
 from agents.ticket_graph import build_ticket_graph
 
-_KB_FIELDS = ("domain", "retrieved_chunks", "confidence", "sources", "needs_escalation",
+_KB_FIELDS = ("domain", "retrieved_chunks", "confidence", "sources", "cache_hit", "needs_escalation",
               "escalation_reason", "pending_question")
 
 
