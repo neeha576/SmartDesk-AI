@@ -67,9 +67,19 @@ WELCOME = ("Hi! I'm **SmartDesk**, NMTech's IT & HR help desk assistant. Ask me 
 st.set_page_config(page_title="SmartDesk AI", page_icon=":material/support_agent:", layout="wide")
 st.markdown("""
 <style>
-  /* FAQ buttons: left-aligned, wrap long questions */
-  div[data-testid="stTabs"] button[kind="secondary"] p { text-align: left; font-size: 0.9rem; }
-  div[data-testid="stTabs"] button[kind="secondary"] { justify-content: flex-start; min-height: 3rem; }
+  /* Pastel green buttons, compact size */
+  .stButton > button, div[data-testid="stDialog"] .stButton > button {
+    background: #dff3e7; color: #1f4d36; border: 1px solid #a9dbbd;
+    min-height: 2rem; padding: 0.2rem 0.8rem; border-radius: 8px;
+  }
+  .stButton > button p { font-size: 0.85rem; }
+  .stButton > button:hover { background: #c9ebd7; border-color: #7cc79c; color: #163b29; }
+  .stButton > button:focus:not(:active) { border-color: #5fb784; color: #163b29; }
+  .stButton > button[kind="primary"] { background: #bfe6cf; border-color: #7cc79c; font-weight: 600; }
+  .stButton > button[kind="primary"]:hover { background: #a9dcbe; }
+  /* FAQ buttons: left-aligned text */
+  div[data-testid="stTabs"] .stButton > button { justify-content: flex-start; text-align: left; }
+  div[data-testid="stTabs"] .stButton > button p { text-align: left; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -151,7 +161,7 @@ def ticket_form():
             st.rerun()
 
 
-c1, c2, _ = st.columns([1, 1, 2])
+c1, c2, _ = st.columns([1, 1.3, 3.5])
 with c1:
     if st.button("Create ticket", icon=":material/confirmation_number:", type="primary", use_container_width=True):
         ticket_form()
@@ -159,7 +169,7 @@ with c2:
     st.button("Check ticket status", icon=":material/manage_search:", use_container_width=True,
               on_click=ask, args=("What's the status of my tickets?",))
 
-with st.expander("Popular questions", icon=":material/help:", expanded=len(st.session_state.messages) <= 1):
+with st.expander("Popular questions", icon=":material/help:", expanded=False):
     it_tab, hr_tab = st.tabs(["IT", "HR"])
     for tab, faqs, prefix in ((it_tab, IT_FAQS, "it"), (hr_tab, HR_FAQS, "hr")):
         with tab:
