@@ -1,0 +1,18 @@
+{
+  "timestamp": "20261013_131327",
+  "dataset": "golden_dataset.json",
+  "judge_model": null,
+  "with_cache": false,
+  "n_items": 73,
+  "k": 5,
+  "retrieval": {
+    "n": 56,
+    "mrr@5": 0.9375,
+    "hit@1": 0.875,
+    "hit@3": 1.0,
+    "hit@5": 1.0,
+    "recall@5": 0.9910714285714286,
+    "mrr@5_IT": 0.95,
+    "mrr@5_HR": 0.9305555555555556
+  }
+}

@@ -1,0 +1,1413 @@
+[
+  {
+    "id": "IT-01",
+    "question": "I forgot my password – how can I set a new one?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-001",
+        "IT-003",
+        "IT-002"
+      ],
+      "top_score": 0.5620239949215848,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-02",
+    "question": "What rules does a new password have to follow?",
+    "domain": "IT",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-001",
+        "IT-002",
+        "IT-003"
+      ],
+      "top_score": 0.6417167347526722,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-03",
+    "question": "I typed my password wrong too many times and now I can't sign in.",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-002",
+        "IT-001"
+      ],
+      "top_score": 0.4240643767334586,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-04",
+    "question": "Can I use the self-service password reset before I've set up multi-factor authentication?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-001",
+      "IT-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-003",
+        "IT-001",
+        "IT-002"
+      ],
+      "top_score": 0.7280602943777906,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-05",
+    "question": "What are the steps to get on the VPN from home?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-002",
+        "ONB-002"
+      ],
+      "top_score": 0.5404956143565207,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-06",
+    "question": "Is it OK to use the VPN on my own personal computer?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-002",
+        "IT-004",
+        "IT-005"
+      ],
+      "top_score": 0.6650702815328225,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-07",
+    "question": "GlobalProtect keeps telling me authentication failed.",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-002",
+      "IT-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-002",
+        "IT-001"
+      ],
+      "top_score": 0.5321605746125002,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-08",
+    "question": "Do I have to be on the VPN to use Outlook email and Teams?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-006",
+        "IT-002"
+      ],
+      "top_score": 0.6787580977190897,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-09",
+    "question": "How do I register the Authenticator app for MFA?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-003",
+        "IT-001",
+        "IT-006"
+      ],
+      "top_score": 0.7056809417227442,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-10",
+    "question": "My old phone with the Authenticator app is gone. How do I get MFA on my new phone?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-003",
+        "IT-006",
+        "IT-002"
+      ],
+      "top_score": 0.6829692036174595,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-11",
+    "question": "I just got an MFA notification I didn't trigger. Should I approve it?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-003",
+        "IT-002"
+      ],
+      "top_score": 0.695134019832129,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-12",
+    "question": "I need an Adobe Acrobat license – how do I get one?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-004",
+        "ONB-002",
+        "IT-005"
+      ],
+      "top_score": 0.4262310612516001,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-13",
+    "question": "Am I allowed to install AnyDesk to help a coworker remotely?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-004",
+        "IT-006",
+        "IT-002"
+      ],
+      "top_score": 0.6630222223431397,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-14",
+    "question": "A client is visiting tomorrow and needs internet access. What do I do?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-005"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-005",
+        "IT-002",
+        "IT-004"
+      ],
+      "top_score": 0.5222919431106106,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-15",
+    "question": "How long does a guest Wi-Fi code work, and for how many devices?",
+    "domain": "IT",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-005"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-005",
+        "IT-002"
+      ],
+      "top_score": 0.7120461861510864,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-16",
+    "question": "Can I read my work email in the Gmail app on my phone?",
+    "domain": "IT",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-006"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-006",
+        "IT-003"
+      ],
+      "top_score": 0.536794805961878,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-17",
+    "question": "What time does the IT service desk open and close?",
+    "domain": "IT",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-007"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-007",
+        "ONB-002",
+        "IT-002"
+      ],
+      "top_score": 0.6624444088894244,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-18",
+    "question": "How fast will IT respond to a P2 ticket?",
+    "domain": "IT",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "IT-007"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "IT-007",
+        "IT-002",
+        "ONB-002"
+      ],
+      "top_score": 0.7826921819523964,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-19",
+    "question": "I'm starting remotely next week. When will my laptop arrive?",
+    "domain": "IT",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-002",
+        "IT-004",
+        "IT-002"
+      ],
+      "top_score": 0.6637848423631636,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "IT-20",
+    "question": "Someone stole my work laptop from my car. What should I do?",
+    "domain": "IT",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-002",
+      "IT-007"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-002",
+        "IT-003"
+      ],
+      "top_score": 0.6412755638334078,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 0.5
+    }
+  },
+  {
+    "id": "HR-01",
+    "question": "How much sick leave am I entitled to each year?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.6977806322692045,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-02",
+    "question": "How many vacation days do I earn in a year?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.540467084249934,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-03",
+    "question": "If I don't use all my PTO this year, what happens to it?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.780215555667315,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-04",
+    "question": "Do leftover sick days get paid out when I quit?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.6629190488827956,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-05",
+    "question": "When do I need a doctor's note for sick days?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.8138250536765883,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-06",
+    "question": "How many weeks of maternity leave does NMTech give?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001",
+        "ONB-005"
+      ],
+      "top_score": 0.868329798693761,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-07",
+    "question": "My partner is having a baby. How much leave do I get as the non-birthing parent?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.6447778417279666,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-08",
+    "question": "How many paid holidays does the company have?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.660257352631674,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-09",
+    "question": "What's the process for booking time off?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001",
+        "HR-002",
+        "PAY-002"
+      ],
+      "top_score": 0.5829471195848408,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-10",
+    "question": "Am I eligible for FMLA leave?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001"
+      ],
+      "top_score": 0.6841695377359729,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-11",
+    "question": "How many days a week do I need to be in the office?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-002",
+        "HR-001",
+        "ONB-004",
+        "ONB-005"
+      ],
+      "top_score": 0.44645560978202276,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-12",
+    "question": "Can I work from my parents' home in Texas for two weeks?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001",
+        "HR-002"
+      ],
+      "top_score": 0.5775947116492669,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-13",
+    "question": "Is there any reimbursement for my home internet?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-003",
+        "HR-002"
+      ],
+      "top_score": 0.5578604292253238,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-14",
+    "question": "Can I get reimbursed for a standing desk for my home office?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-002",
+        "HR-003"
+      ],
+      "top_score": 0.6564901651472146,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-15",
+    "question": "What are the steps to file an expense claim?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-003",
+        "HR-002"
+      ],
+      "top_score": 0.6552731296981764,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-16",
+    "question": "I have a receipt from six weeks ago. Is it too late to submit it?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-003",
+        "PAY-001"
+      ],
+      "top_score": 0.6003304176425348,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-17",
+    "question": "What's the per-person limit for a client dinner?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-003",
+        "HR-004"
+      ],
+      "top_score": 0.6797381760039926,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-18",
+    "question": "A vendor wants to send me a $150 gift basket. Can I accept it?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-004",
+        "HR-003",
+        "HR-002",
+        "PAY-003"
+      ],
+      "top_score": 0.5576746543584692,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-19",
+    "question": "Can I do consulting work for another company on weekends?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-002",
+        "HR-004",
+        "HR-001"
+      ],
+      "top_score": 0.5516043279388894,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-20",
+    "question": "How can I report harassment without going through my manager?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-005"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-005",
+        "HR-004"
+      ],
+      "top_score": 0.7018333745768708,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-21",
+    "question": "Could I get in trouble for reporting harassment?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-005"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-005",
+        "HR-004"
+      ],
+      "top_score": 0.7535342737630462,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-22",
+    "question": "When do annual reviews happen and when do raises kick in?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-006"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-006",
+        "PAY-003",
+        "ONB-005"
+      ],
+      "top_score": 0.600894756270087,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-23",
+    "question": "I was hired in mid-November. Will I get a rating this year?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-006"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-006",
+        "HR-001",
+        "PAY-003"
+      ],
+      "top_score": 0.5471057857177033,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-24",
+    "question": "What time should I arrive on my first day, and where do I go?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-003",
+        "ONB-001"
+      ],
+      "top_score": 0.6270530808573985,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-25",
+    "question": "Which ID documents do I need for the I-9 form?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-001",
+        "PAY-002",
+        "HR-001"
+      ],
+      "top_score": 0.6923842808922993,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-26",
+    "question": "How do I sign up for medical, dental and vision coverage?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-003",
+        "PAY-003"
+      ],
+      "top_score": 0.5663600976841949,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-27",
+    "question": "What's the company 401k match?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-003",
+        "PAY-003",
+        "ONB-005",
+        "ONB-004"
+      ],
+      "top_score": 0.5892540267230791,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-28",
+    "question": "How much does the company put in an HSA for family coverage?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-003",
+        "PAY-003",
+        "HR-001"
+      ],
+      "top_score": 0.6063163243665086,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-29",
+    "question": "How long is the introductory period for new hires?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "ONB-005"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "ONB-005",
+        "ONB-004",
+        "HR-001",
+        "ONB-001"
+      ],
+      "top_score": 0.6791484459090638,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-30",
+    "question": "How often do we get paid?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "PAY-001"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-001",
+        "PAY-001"
+      ],
+      "top_score": 0.5754500148716641,
+      "rr": 0.5,
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-31",
+    "question": "How do I change how much tax is withheld from my paycheck?",
+    "domain": "HR",
+    "category": "procedural",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "PAY-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "PAY-002",
+        "PAY-003",
+        "PAY-001"
+      ],
+      "top_score": 0.615011554225318,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-32",
+    "question": "My salary is $90,000 and I got a 4 rating. What will my bonus be?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "PAY-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "PAY-003",
+        "HR-006",
+        "ONB-003",
+        "HR-001"
+      ],
+      "top_score": 0.7540288378056861,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-33",
+    "question": "How does vesting work for my stock options?",
+    "domain": "HR",
+    "category": "factual",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "PAY-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "PAY-004",
+        "PAY-003",
+        "ONB-003"
+      ],
+      "top_score": 0.744306186400367,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "HR-34",
+    "question": "What happens to my vested options after I leave the company?",
+    "domain": "HR",
+    "category": "policy",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "PAY-004"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "PAY-004",
+        "PAY-003",
+        "HR-001"
+      ],
+      "top_score": 0.6952009119808745,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "NM-01",
+    "question": "Can I work from Mexico for a month?",
+    "domain": "HR",
+    "category": "near_miss",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-002"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-002",
+        "HR-001"
+      ],
+      "top_score": 0.8510317009391142,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "NM-02",
+    "question": "Is my daily commute to the office reimbursable?",
+    "domain": "HR",
+    "category": "near_miss",
+    "expected": "answer",
+    "relevant_doc_ids": [
+      "HR-003"
+    ],
+    "retrieval": {
+      "ranked_doc_ids": [
+        "HR-003",
+        "HR-002"
+      ],
+      "top_score": 0.6654880500697742,
+      "rr": 1.0,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  {
+    "id": "GAP-01",
+    "question": "My monitor has been flickering for two days.",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-02",
+    "question": "How do I add the office printer to my laptop?",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-03",
+    "question": "My laptop battery drains in an hour.",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-04",
+    "question": "My Bluetooth headset won't pair with my laptop.",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-05",
+    "question": "How do I book a meeting room?",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-06",
+    "question": "Jira is showing a 500 error.",
+    "domain": "IT",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-07",
+    "question": "Where can I park at the office?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-08",
+    "question": "Is there a relocation allowance for moving to Albuquerque?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-09",
+    "question": "Can I take a 3-month sabbatical?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-10",
+    "question": "How much is the employee referral bonus?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-11",
+    "question": "What's the per diem for out-of-town business travel?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-12",
+    "question": "Does NMTech pay for a gym membership?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "GAP-13",
+    "question": "What's on the cafeteria menu this week?",
+    "domain": "HR",
+    "category": "kb_gap",
+    "expected": "escalate",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "OOS-01",
+    "question": "What's the weather in Albuquerque today?",
+    "domain": null,
+    "category": "out_of_scope",
+    "expected": "decline",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "OOS-02",
+    "question": "Who won the Lobos game last night?",
+    "domain": null,
+    "category": "out_of_scope",
+    "expected": "decline",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "OOS-03",
+    "question": "Write me a poem about Mondays.",
+    "domain": null,
+    "category": "out_of_scope",
+    "expected": "decline",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  },
+  {
+    "id": "OOS-04",
+    "question": "What's the capital of France?",
+    "domain": null,
+    "category": "out_of_scope",
+    "expected": "decline",
+    "relevant_doc_ids": [],
+    "retrieval": null
+  }
+]

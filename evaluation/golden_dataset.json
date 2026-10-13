@@ -1,0 +1,1083 @@
+{
+  "name": "SmartDesk AI golden dataset",
+  "version": 1,
+  "description": "Hand-built evaluation set for NMTech's IT/HR help desk. Answerable questions are paraphrased from the knowledge base; reference answers are copied from knowledge_base/qa_pairs (ground truth). kb_gap questions are deliberate gaps (knowledge_base/GAPS.md) and must escalate; out_of_scope questions must be politely declined.",
+  "fields": {
+    "expected_behavior": "answer | escalate | decline",
+    "relevant_doc_ids": "documents that contain the answer – used for MRR / Hit@k / Recall@k",
+    "reference_answer": "ground-truth answer – used for answer F1 and by the LLM judge",
+    "key_facts": "short facts that must appear in a correct answer (each is contained in reference_answer)"
+  },
+  "items": [
+    {
+      "id": "IT-01",
+      "question": "I forgot my password – how can I set a new one?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-001"
+      ],
+      "reference_answer": "Go to the Self-Service Password Portal at https://passwords.nmtech.com, click Forgot Password, enter your employee ID, approve the MFA prompt (or enter the SMS code), and set a new password. If you're on a company laptop away from the office, connect to the VPN once afterwards so the laptop picks up the new password.",
+      "key_facts": [
+        "passwords.nmtech.com",
+        "forgot password",
+        "employee id"
+      ],
+      "source_qa": "IT-QA-001"
+    },
+    {
+      "id": "IT-02",
+      "question": "What rules does a new password have to follow?",
+      "domain": "IT",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-001"
+      ],
+      "reference_answer": "At least 12 characters with an uppercase letter, a lowercase letter, a number and a symbol. Passwords expire every 90 days, and you can't reuse any of your last 5 passwords or include your name, employee ID or 'NMTech'.",
+      "key_facts": [
+        "12 characters",
+        "90 days",
+        "last 5"
+      ],
+      "source_qa": "IT-QA-002"
+    },
+    {
+      "id": "IT-03",
+      "question": "I typed my password wrong too many times and now I can't sign in.",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-001"
+      ],
+      "reference_answer": "Accounts lock after 5 failed sign-in attempts and unlock automatically after 30 minutes. If you can't wait, call the IT Service Desk on ext. 2020 with your employee ID; they'll verify you with a code sent to your registered mobile and unlock it.",
+      "key_facts": [
+        "5 failed",
+        "30 minutes",
+        "2020"
+      ],
+      "source_qa": "IT-QA-003"
+    },
+    {
+      "id": "IT-04",
+      "question": "Can I use the self-service password reset before I've set up multi-factor authentication?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-001",
+        "IT-003"
+      ],
+      "reference_answer": "No. Self-service password reset only works once MFA is set up. Without MFA, call the IT Service Desk on ext. 2020.",
+      "key_facts": [
+        "no",
+        "2020"
+      ],
+      "source_qa": "IT-QA-004"
+    },
+    {
+      "id": "IT-05",
+      "question": "What are the steps to get on the VPN from home?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-002"
+      ],
+      "reference_answer": "Open GlobalProtect, enter the portal vpn.nmtech.com the first time, sign in with your NMTech email and password, and approve the MFA prompt in Microsoft Authenticator. Sessions last up to 12 hours.",
+      "key_facts": [
+        "globalprotect",
+        "vpn.nmtech.com",
+        "12 hours"
+      ],
+      "source_qa": "IT-QA-005"
+    },
+    {
+      "id": "IT-06",
+      "question": "Is it OK to use the VPN on my own personal computer?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-002"
+      ],
+      "reference_answer": "No. Personal devices cannot connect to the VPN; only company laptops are allowed.",
+      "key_facts": [
+        "no",
+        "company laptops"
+      ],
+      "source_qa": "IT-QA-007"
+    },
+    {
+      "id": "IT-07",
+      "question": "GlobalProtect keeps telling me authentication failed.",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-002",
+        "IT-001"
+      ],
+      "reference_answer": "Your password has probably expired. Reset it at the Self-Service Password Portal and try connecting again.",
+      "key_facts": [
+        "expired",
+        "self service password portal"
+      ],
+      "source_qa": "IT-QA-008"
+    },
+    {
+      "id": "IT-08",
+      "question": "Do I have to be on the VPN to use Outlook email and Teams?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-002"
+      ],
+      "reference_answer": "No. Email, NovaHR and Microsoft Teams work without the VPN. You need it for internal systems such as Jira, the code repository, and the finance and HR databases.",
+      "key_facts": [
+        "no",
+        "jira"
+      ],
+      "source_qa": "IT-QA-009"
+    },
+    {
+      "id": "IT-09",
+      "question": "How do I register the Authenticator app for MFA?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-003"
+      ],
+      "reference_answer": "Install Microsoft Authenticator on your phone, go to https://aka.ms/mfasetup on your laptop, sign in, choose Add sign-in method → Authenticator app, scan the QR code and approve the test notification. Then add your mobile number as a backup SMS method.",
+      "key_facts": [
+        "microsoft authenticator",
+        "aka.ms/mfasetup",
+        "qr code"
+      ],
+      "source_qa": "IT-QA-010"
+    },
+    {
+      "id": "IT-10",
+      "question": "My old phone with the Authenticator app is gone. How do I get MFA on my new phone?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-003"
+      ],
+      "reference_answer": "Call the IT Service Desk on ext. 2020 immediately. After verifying your identity, IT removes the old device and issues a Temporary Access Pass valid for 8 hours so you can enroll a new phone.",
+      "key_facts": [
+        "2020",
+        "temporary access pass",
+        "8 hours"
+      ],
+      "source_qa": "IT-QA-012"
+    },
+    {
+      "id": "IT-11",
+      "question": "I just got an MFA notification I didn't trigger. Should I approve it?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-003"
+      ],
+      "reference_answer": "No. Deny it and report it to security@nmtech.com. Never approve a prompt because someone asked you to.",
+      "key_facts": [
+        "deny",
+        "security@nmtech.com"
+      ],
+      "source_qa": "IT-QA-013"
+    },
+    {
+      "id": "IT-12",
+      "question": "I need an Adobe Acrobat license – how do I get one?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-004"
+      ],
+      "reference_answer": "Go to the IT Service Portal → Request Software, choose the product, give a business reason and cost center, and get your manager's approval in the portal. IT assigns and installs the license within 3 business days of approval.",
+      "key_facts": [
+        "it service portal",
+        "request software",
+        "3 business days"
+      ],
+      "source_qa": "IT-QA-014"
+    },
+    {
+      "id": "IT-13",
+      "question": "Am I allowed to install AnyDesk to help a coworker remotely?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-004"
+      ],
+      "reference_answer": "No. Remote-access tools are not allowed except those provided by IT.",
+      "key_facts": [
+        "no"
+      ],
+      "source_qa": "IT-QA-017"
+    },
+    {
+      "id": "IT-14",
+      "question": "A client is visiting tomorrow and needs internet access. What do I do?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-005"
+      ],
+      "reference_answer": "Ask reception on the ground floor or go to the IT Service Portal → Guest Wi-Fi Voucher, enter the visitor's name, company and visit dates. The voucher code is emailed to you to share with your guest.",
+      "key_facts": [
+        "guest wi fi voucher",
+        "reception"
+      ],
+      "source_qa": "IT-QA-018"
+    },
+    {
+      "id": "IT-15",
+      "question": "How long does a guest Wi-Fi code work, and for how many devices?",
+      "domain": "IT",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-005"
+      ],
+      "reference_answer": "24 hours by default, extendable up to 5 days for multi-day visits. Each voucher covers up to 3 devices.",
+      "key_facts": [
+        "24 hours",
+        "5 days",
+        "3 devices"
+      ],
+      "source_qa": "IT-QA-019"
+    },
+    {
+      "id": "IT-16",
+      "question": "Can I read my work email in the Gmail app on my phone?",
+      "domain": "IT",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-006"
+      ],
+      "reference_answer": "No. Only the Microsoft Outlook app is allowed; the built-in Mail and Gmail apps are blocked for company email.",
+      "key_facts": [
+        "no",
+        "outlook"
+      ],
+      "source_qa": "IT-QA-022"
+    },
+    {
+      "id": "IT-17",
+      "question": "What time does the IT service desk open and close?",
+      "domain": "IT",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-007"
+      ],
+      "reference_answer": "Monday to Friday, 7:00 AM – 7:00 PM Mountain Time. For Critical (P1) issues outside hours, call ext. 2020 and choose option 9 for the on-call engineer.",
+      "key_facts": [
+        "7:00 am",
+        "7:00 pm",
+        "monday to friday"
+      ],
+      "source_qa": "IT-QA-024"
+    },
+    {
+      "id": "IT-18",
+      "question": "How fast will IT respond to a P2 ticket?",
+      "domain": "IT",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "IT-007"
+      ],
+      "reference_answer": "High (P2) tickets get a first response within 1 hour, with a target resolution of 1 business day.",
+      "key_facts": [
+        "1 hour",
+        "1 business day"
+      ],
+      "source_qa": "IT-QA-025"
+    },
+    {
+      "id": "IT-19",
+      "question": "I'm starting remotely next week. When will my laptop arrive?",
+      "domain": "IT",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-002"
+      ],
+      "reference_answer": "Office hires collect it from the IT desk (3rd floor) at 9:00 AM on day one. Approved remote hires get it by courier 2 business days before their start date.",
+      "key_facts": [
+        "courier",
+        "2 business days"
+      ],
+      "source_qa": "IT-QA-026"
+    },
+    {
+      "id": "IT-20",
+      "question": "Someone stole my work laptop from my car. What should I do?",
+      "domain": "IT",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-002",
+        "IT-007"
+      ],
+      "reference_answer": "Call ext. 2020 immediately. A lost or stolen laptop is treated as a Critical (P1) security incident.",
+      "key_facts": [
+        "2020",
+        "p1"
+      ],
+      "source_qa": "IT-QA-028"
+    },
+    {
+      "id": "HR-01",
+      "question": "How much sick leave am I entitled to each year?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "8 days (64 hours) of sick leave per year, available from your first day. Unused sick leave carries over up to 8 days (64 hours), but it is never paid out.",
+      "key_facts": [
+        "8 days",
+        "64 hours"
+      ],
+      "source_qa": "HR-QA-001"
+    },
+    {
+      "id": "HR-02",
+      "question": "How many vacation days do I earn in a year?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "15 days (120 hours) per year, accruing at 1.25 days (10 hours) per month from your first day. You can use it after your 90-day introductory period.",
+      "key_facts": [
+        "15 days",
+        "1.25 days"
+      ],
+      "source_qa": "HR-QA-002"
+    },
+    {
+      "id": "HR-03",
+      "question": "If I don't use all my PTO this year, what happens to it?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "You can carry over up to 5 days into the next year and cash out up to 5 more in December (paid in the January paycheck). Anything else is forfeited on December 31.",
+      "key_facts": [
+        "5 days",
+        "december 31"
+      ],
+      "source_qa": "HR-QA-004"
+    },
+    {
+      "id": "HR-04",
+      "question": "Do leftover sick days get paid out when I quit?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "Yes. Accrued, unused PTO is paid out in your final paycheck when you leave NMTech. Unused sick leave is not paid out.",
+      "key_facts": [
+        "sick leave is not paid out"
+      ],
+      "source_qa": "HR-QA-005"
+    },
+    {
+      "id": "HR-05",
+      "question": "When do I need a doctor's note for sick days?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "Only if you are out sick for more than 3 consecutive days.",
+      "key_facts": [
+        "more than 3 consecutive days"
+      ],
+      "source_qa": "HR-QA-006"
+    },
+    {
+      "id": "HR-06",
+      "question": "How many weeks of maternity leave does NMTech give?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "The birthing parent gets 12 weeks of fully paid parental (maternity) leave, after 90 days of employment. It must be taken within 12 months of the birth and can be split into up to two blocks; for eligible employees it runs at the same time as FMLA leave.",
+      "key_facts": [
+        "12 weeks",
+        "90 days"
+      ],
+      "source_qa": "HR-QA-046"
+    },
+    {
+      "id": "HR-07",
+      "question": "My partner is having a baby. How much leave do I get as the non-birthing parent?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "A non-birthing parent gets 6 weeks of fully paid parental (paternity) leave, after 90 days of employment, taken within 12 months of the birth or placement. Adoptive parents get the same 6 weeks.",
+      "key_facts": [
+        "6 weeks"
+      ],
+      "source_qa": "HR-QA-047"
+    },
+    {
+      "id": "HR-08",
+      "question": "How many paid holidays does the company have?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "10 company holidays a year, plus 2 floating holidays you choose yourself. The holiday calendar is published in NMTech HR every December.",
+      "key_facts": [
+        "10 company holidays",
+        "2 floating"
+      ],
+      "source_qa": "HR-QA-008"
+    },
+    {
+      "id": "HR-09",
+      "question": "What's the process for booking time off?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "Request it in NMTech HR → Time Off. Give at least 2 weeks' notice for absences longer than 3 days and at least 2 days' notice otherwise. For sick days, tell your manager before your start time and record it when you're back.",
+      "key_facts": [
+        "time off",
+        "2 weeks"
+      ],
+      "source_qa": "HR-QA-010"
+    },
+    {
+      "id": "HR-10",
+      "question": "Am I eligible for FMLA leave?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-001"
+      ],
+      "reference_answer": "FMLA gives up to 12 weeks of unpaid, job-protected leave if you have at least 12 months of service and 1,250 hours worked in the past year. Email hr-help@nmtech.com to start a request.",
+      "key_facts": [
+        "12 weeks",
+        "12 months",
+        "1250 hours"
+      ],
+      "source_qa": "HR-QA-011"
+    },
+    {
+      "id": "HR-11",
+      "question": "How many days a week do I need to be in the office?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-002"
+      ],
+      "reference_answer": "NMTech is hybrid: 3 office days a week at the Albuquerque HQ (Tuesday–Thursday are anchor days) and 2 remote days. Core hours are 10:00 AM – 3:00 PM Mountain Time. New hires work from the office for their first 4 weeks.",
+      "key_facts": [
+        "3 office days",
+        "tuesday"
+      ],
+      "source_qa": "HR-QA-012"
+    },
+    {
+      "id": "HR-12",
+      "question": "Can I work from my parents' home in Texas for two weeks?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-002"
+      ],
+      "reference_answer": "Yes, for up to 30 days per calendar year with your manager's approval. Record it in NMTech HR → Work Location before you go so payroll can withhold the right state taxes.",
+      "key_facts": [
+        "30 days",
+        "manager"
+      ],
+      "source_qa": "HR-QA-013"
+    },
+    {
+      "id": "HR-13",
+      "question": "Is there any reimbursement for my home internet?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-002"
+      ],
+      "reference_answer": "Yes, $50 per month, claimed through NMTech HR → Expenses.",
+      "key_facts": [
+        "50"
+      ],
+      "source_qa": "HR-QA-015"
+    },
+    {
+      "id": "HR-14",
+      "question": "Can I get reimbursed for a standing desk for my home office?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-002"
+      ],
+      "reference_answer": "Yes. There's a one-time home office stipend of up to $500 for ergonomic equipment, claimable after your 90-day introductory period.",
+      "key_facts": [
+        "500",
+        "90 day"
+      ],
+      "source_qa": "HR-QA-016"
+    },
+    {
+      "id": "HR-15",
+      "question": "What are the steps to file an expense claim?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-003"
+      ],
+      "reference_answer": "Go to NMTech HR → Expenses → New Claim, choose the category, enter the date, amount and purpose, upload the receipt (required over $25) and submit. Your manager approves, then Finance reviews.",
+      "key_facts": [
+        "new claim",
+        "receipt",
+        "25"
+      ],
+      "source_qa": "HR-QA-017"
+    },
+    {
+      "id": "HR-16",
+      "question": "I have a receipt from six weeks ago. Is it too late to submit it?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-003"
+      ],
+      "reference_answer": "Claims must be submitted within 30 days of the expense. Older claims are rejected unless your department head approves the delay.",
+      "key_facts": [
+        "30 days",
+        "department head"
+      ],
+      "source_qa": "HR-QA-019"
+    },
+    {
+      "id": "HR-17",
+      "question": "What's the per-person limit for a client dinner?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-003"
+      ],
+      "reference_answer": "$75 per person per meal. List the attendees on the claim.",
+      "key_facts": [
+        "75 per person"
+      ],
+      "source_qa": "HR-QA-021"
+    },
+    {
+      "id": "HR-18",
+      "question": "A vendor wants to send me a $150 gift basket. Can I accept it?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-004"
+      ],
+      "reference_answer": "Up to $100 per person per year from any single business partner. Cash, gift cards and vouchers may never be accepted.",
+      "key_facts": [
+        "100 per person per year"
+      ],
+      "source_qa": "HR-QA-022"
+    },
+    {
+      "id": "HR-19",
+      "question": "Can I do consulting work for another company on weekends?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-004"
+      ],
+      "reference_answer": "Only with written approval from your manager and HR before you start, and never for work that competes with NMTech.",
+      "key_facts": [
+        "written approval",
+        "compete"
+      ],
+      "source_qa": "HR-QA-023"
+    },
+    {
+      "id": "HR-20",
+      "question": "How can I report harassment without going through my manager?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-005"
+      ],
+      "reference_answer": "Report it to any manager, to People Operations at hr-help@nmtech.com, to conduct@nmtech.com, or through the anonymous Ethics Hotline – you don't have to go through your own manager. HR acknowledges reports within 2 business days and most investigations finish within 30 days.",
+      "key_facts": [
+        "hr-help@nmtech.com",
+        "ethics hotline",
+        "2 business days"
+      ],
+      "source_qa": "HR-QA-025"
+    },
+    {
+      "id": "HR-21",
+      "question": "Could I get in trouble for reporting harassment?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-005"
+      ],
+      "reference_answer": "No. Retaliation against anyone who reports or takes part in an investigation is itself a violation of the policy, and information is shared only with those who need it.",
+      "key_facts": [
+        "retaliation"
+      ],
+      "source_qa": "HR-QA-026"
+    },
+    {
+      "id": "HR-22",
+      "question": "When do annual reviews happen and when do raises kick in?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-006"
+      ],
+      "reference_answer": "The performance year follows the calendar year. There's a mid-year check-in in July, the annual review in December, ratings shared in February, and merit increases effective March 1.",
+      "key_facts": [
+        "december",
+        "march 1"
+      ],
+      "source_qa": "HR-QA-027"
+    },
+    {
+      "id": "HR-23",
+      "question": "I was hired in mid-November. Will I get a rating this year?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-006"
+      ],
+      "reference_answer": "No. Only employees who joined on or before October 1 take part in that year's cycle; you'll be reviewed in the following cycle.",
+      "key_facts": [
+        "october 1"
+      ],
+      "source_qa": "HR-QA-028"
+    },
+    {
+      "id": "HR-24",
+      "question": "What time should I arrive on my first day, and where do I go?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-001"
+      ],
+      "reference_answer": "Report to lobby reception at the Albuquerque headquarters at 8:30 AM for your badge, pick up your laptop at the IT desk at 9:00 AM, attend HR orientation at 10:00 AM, and join your team for lunch at noon.",
+      "key_facts": [
+        "8:30 am",
+        "lobby reception"
+      ],
+      "source_qa": "HR-QA-029"
+    },
+    {
+      "id": "HR-25",
+      "question": "Which ID documents do I need for the I-9 form?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-001"
+      ],
+      "reference_answer": "Original, unexpired documents for Form I-9 – for example a U.S. passport, or a driver's license plus a Social Security card – and your bank details if you haven't set up direct deposit yet.",
+      "key_facts": [
+        "passport",
+        "social security card"
+      ],
+      "source_qa": "HR-QA-030"
+    },
+    {
+      "id": "HR-26",
+      "question": "How do I sign up for medical, dental and vision coverage?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-003"
+      ],
+      "reference_answer": "Go to NMTech HR → Benefits → Enroll within 30 days of your start date, choose the PPO or HDHP medical plan plus dental and vision, add dependents, and submit. Coverage starts on your first day.",
+      "key_facts": [
+        "30 days",
+        "ppo",
+        "hdhp"
+      ],
+      "source_qa": "HR-QA-031"
+    },
+    {
+      "id": "HR-27",
+      "question": "What's the company 401k match?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-003"
+      ],
+      "reference_answer": "Yes. NMTech matches 100% of the first 4% of base salary you contribute, and the match vests immediately.",
+      "key_facts": [
+        "first 4%",
+        "vests immediately"
+      ],
+      "source_qa": "HR-QA-032"
+    },
+    {
+      "id": "HR-28",
+      "question": "How much does the company put in an HSA for family coverage?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-003"
+      ],
+      "reference_answer": "If you choose the HDHP, NMTech contributes $1,000 a year for employee-only coverage or $2,000 a year for family coverage.",
+      "key_facts": [
+        "2000"
+      ],
+      "source_qa": "HR-QA-033"
+    },
+    {
+      "id": "HR-29",
+      "question": "How long is the introductory period for new hires?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "ONB-005"
+      ],
+      "reference_answer": "NMTech has a 90-day introductory period, with a review around day 75. It can be extended once by up to 30 days.",
+      "key_facts": [
+        "90 day",
+        "day 75"
+      ],
+      "source_qa": "HR-QA-036"
+    },
+    {
+      "id": "HR-30",
+      "question": "How often do we get paid?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "PAY-001"
+      ],
+      "reference_answer": "Every other Friday – 26 paychecks a year, by direct deposit. Pay stubs appear in NMTech HR on payday.",
+      "key_facts": [
+        "every other friday",
+        "26"
+      ],
+      "source_qa": "HR-QA-038"
+    },
+    {
+      "id": "HR-31",
+      "question": "How do I change how much tax is withheld from my paycheck?",
+      "domain": "HR",
+      "category": "procedural",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "PAY-002"
+      ],
+      "reference_answer": "Update your Form W-4 in NMTech HR → Pay → Tax Forms at any time. Changes made at least 5 business days before payday apply to that paycheck. New Mexico state tax is withheld based on your W-4.",
+      "key_facts": [
+        "w-4",
+        "tax forms"
+      ],
+      "source_qa": "HR-QA-040"
+    },
+    {
+      "id": "HR-32",
+      "question": "My salary is $90,000 and I got a 4 rating. What will my bonus be?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "PAY-003"
+      ],
+      "reference_answer": "Your target bonus is 10% of base salary for most roles, multiplied by your rating: 150% for a 5, 120% for a 4, 100% for a 3, 50% for a 2 and 0% for a 1. For example, a $90,000 salary with a 4 rating pays $10,800. It's paid by March 15.",
+      "key_facts": [
+        "10800"
+      ],
+      "source_qa": "HR-QA-042"
+    },
+    {
+      "id": "HR-33",
+      "question": "How does vesting work for my stock options?",
+      "domain": "HR",
+      "category": "factual",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "PAY-004"
+      ],
+      "reference_answer": "Options vest over 4 years with a 1-year cliff: 25% vests on the first anniversary, then 6.25% every quarter for the next 3 years.",
+      "key_facts": [
+        "4 years",
+        "1 year cliff",
+        "25%"
+      ],
+      "source_qa": "HR-QA-044"
+    },
+    {
+      "id": "HR-34",
+      "question": "What happens to my vested options after I leave the company?",
+      "domain": "HR",
+      "category": "policy",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "PAY-004"
+      ],
+      "reference_answer": "Unvested options are cancelled on your last day. Vested options must be exercised within 90 days of your last day or they are cancelled.",
+      "key_facts": [
+        "90 days"
+      ],
+      "source_qa": "HR-QA-045"
+    },
+    {
+      "id": "NM-01",
+      "question": "Can I work from Mexico for a month?",
+      "domain": "HR",
+      "category": "near_miss",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-002"
+      ],
+      "reference_answer": "Not without written approval from HR and Legal. Working from outside the United States raises tax, immigration and data-protection issues.",
+      "key_facts": [
+        "hr and legal"
+      ],
+      "source_qa": "HR-QA-014"
+    },
+    {
+      "id": "NM-02",
+      "question": "Is my daily commute to the office reimbursable?",
+      "domain": "HR",
+      "category": "near_miss",
+      "expected_behavior": "answer",
+      "relevant_doc_ids": [
+        "HR-003"
+      ],
+      "reference_answer": "Business miles driven in your personal car are reimbursed at the current IRS standard mileage rate. Your daily commute to the office is not reimbursable.",
+      "key_facts": [
+        "commute",
+        "not reimbursable"
+      ],
+      "source_qa": "HR-QA-020"
+    },
+    {
+      "id": "GAP-01",
+      "question": "My monitor has been flickering for two days.",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-02",
+      "question": "How do I add the office printer to my laptop?",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-03",
+      "question": "My laptop battery drains in an hour.",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-04",
+      "question": "My Bluetooth headset won't pair with my laptop.",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-05",
+      "question": "How do I book a meeting room?",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-06",
+      "question": "Jira is showing a 500 error.",
+      "domain": "IT",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an IT ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-07",
+      "question": "Where can I park at the office?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-08",
+      "question": "Is there a relocation allowance for moving to Albuquerque?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-09",
+      "question": "Can I take a 3-month sabbatical?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-10",
+      "question": "How much is the employee referral bonus?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-11",
+      "question": "What's the per diem for out-of-town business travel?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-12",
+      "question": "Does NMTech pay for a gym membership?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "GAP-13",
+      "question": "What's on the cafeteria menu this week?",
+      "domain": "HR",
+      "category": "kb_gap",
+      "expected_behavior": "escalate",
+      "relevant_doc_ids": [],
+      "reference_answer": "Not covered by the knowledge base: say so and offer to raise an HR ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "OOS-01",
+      "question": "What's the weather in Albuquerque today?",
+      "domain": null,
+      "category": "out_of_scope",
+      "expected_behavior": "decline",
+      "relevant_doc_ids": [],
+      "reference_answer": "Out of scope for an IT/HR help desk: politely decline, no ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "OOS-02",
+      "question": "Who won the Lobos game last night?",
+      "domain": null,
+      "category": "out_of_scope",
+      "expected_behavior": "decline",
+      "relevant_doc_ids": [],
+      "reference_answer": "Out of scope for an IT/HR help desk: politely decline, no ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "OOS-03",
+      "question": "Write me a poem about Mondays.",
+      "domain": null,
+      "category": "out_of_scope",
+      "expected_behavior": "decline",
+      "relevant_doc_ids": [],
+      "reference_answer": "Out of scope for an IT/HR help desk: politely decline, no ticket.",
+      "key_facts": []
+    },
+    {
+      "id": "OOS-04",
+      "question": "What's the capital of France?",
+      "domain": null,
+      "category": "out_of_scope",
+      "expected_behavior": "decline",
+      "relevant_doc_ids": [],
+      "reference_answer": "Out of scope for an IT/HR help desk: politely decline, no ticket.",
+      "key_facts": []
+    }
+  ]
+}

@@ -314,6 +314,30 @@ cached answer.
 - **Seeing it work:** `python main.py --debug` shows `cache_hit=True`, and the log line `Cache HIT (HR, 0.95): …`;
   in the web UI turn on *Show routing details*. Tests: `tests/test_semantic_cache.py`.
 
+## Evaluation (golden dataset · MRR · F1 · LLM-as-judge)
+`evaluation/golden_dataset.json` holds **73 hand-built test cases**: 56 answerable IT/HR questions (paraphrased, so
+they don't match the knowledge-base text word for word) with the source document(s), a reference answer copied from
+`knowledge_base/qa_pairs` and must-have key facts; 13 deliberate knowledge-base gaps that must **escalate**
+(`knowledge_base/GAPS.md`); and 4 out-of-scope questions that must be politely **declined**.
+
+```bash
+python evaluation/run_eval.py                    # retrieval + full agent + LLM judge
+python evaluation/run_eval.py --retrieval-only   # MRR only (embeddings, no chat LLM)
+python evaluation/run_eval.py --no-judge --limit 10
+```
+
+| Area | Metrics | How |
+|---|---|---|
+| Retrieval | **MRR@k**, Hit@1/3/k, Recall@k (overall, IT, HR) | Each question goes through the agents' hybrid search; rank of the first relevant document |
+| Behaviour | **Precision / recall / F1** per class (answer, escalate, decline), accuracy, macro-F1, confusion matrix | Each question is sent to the full graph in a fresh conversation; escalation = a ticket was offered |
+| Answer quality | **Token F1** vs. the reference (SQuAD-style), key-fact recall | Only answerable questions the agent answered; `Source:` lines removed |
+| LLM-as-judge | Correctness, **faithfulness** (grounding), relevance (1–5), hallucination rate | Structured verdict from `EVAL_JUDGE_MODEL` (default `LLM_MODEL`), temperature 0 |
+| Speed | Latency mean / p50 / p95 | Per question |
+
+The semantic cache is off during evaluation (add `--with-cache` to include it) and no tickets are created – an
+escalation stops at the "raise a ticket?" question. Results go to `evaluation/results/<timestamp>/`
+(`report.md`, `summary.json`, `results.json` with every answer and grade). Tests: `tests/test_eval.py`.
+
 ## Environment variables
 See `.env.example`.
 
